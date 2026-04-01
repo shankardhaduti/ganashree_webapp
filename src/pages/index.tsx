@@ -11,6 +11,7 @@ import MainHeroImage from '../components/MainHeroImage';
 import Pricing from '../components/Pricing';
 import Product from '../components/Product';
 
+
 const App = () => {
   return (
     <div className={`bg-background grid gap-y-16 overflow-hidden`}>
