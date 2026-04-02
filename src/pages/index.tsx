@@ -47,12 +47,7 @@ const App = () => {
         <Pricing />
       </LazyShow>
 
-      <LazyShow>
-        <>
-          <Canvas />
-          <About />
-        </>
-      </LazyShow>
+    
 
       {/* ⭐ ADD CONTACT US HERE */}
       <LazyShow>
@@ -61,7 +56,12 @@ const App = () => {
           <ContactUs />
         </>
       </LazyShow>
-
+  <LazyShow>
+        <>
+          <Canvas />
+          <About />
+        </>
+      </LazyShow>
       <Analytics />
     </div>
   );
