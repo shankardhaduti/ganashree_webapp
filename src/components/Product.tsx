@@ -1,64 +1,155 @@
-import React from 'react';
-
-import config from '../config/index.json';
-import Divider from './Divider';
+import React, { useState, useRef } from "react";
+import config from "../config/index.json";
 
 const Product = () => {
   const { product } = config;
-  const [firstItem, secondItem] = product.items;
+
+  const [selected, setSelected] = useState(null);
+  const scrollRef = useRef(null); // Scroll inside popup
+
+  const normalProducts = product.items.filter((item) => !item.isByproduct);
+  const wasteProducts = product.items.filter((item) => item.isByproduct);
 
   return (
-    <section className={`bg-background py-8`} id="product">
-      <div className={`container max-w-5xl mx-auto m-8`}>
-        <h1
-          className={`w-full my-2 text-5xl font-bold leading-tight text-center text-primary`}
-        >
-          {product.title.split(' ').map((word, index) => (
-            <span
+    <section className="relative bg-white" id="product">
+      <div className="max-w-6xl mx-auto px-4 py-12">
+
+        {/* ======= NORMAL PRODUCTS (OILS) ======= */}
+        <h2 className="text-3xl font-bold text-center mb-6">Our Oils</h2>
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {normalProducts.map((item, index) => (
+            <div
               key={index}
-              className={index % 2 ? 'text-primary' : 'text-border'}
+              onClick={() => setSelected(item)}
+              className="relative cursor-pointer overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
             >
-              {word}{' '}
-            </span>
+              <img
+                src={item.img}
+                alt={item.name}
+                className="h-64 w-full object-cover"
+              />
+              <div className="absolute bottom-0 w-full bg-black bg-opacity-60 text-white p-4">
+                <p className="font-semibold text-lg">{item.name}</p>
+                <p className="text-sm mt-1">{item.description}</p>
+              </div>
+            </div>
           ))}
-        </h1>
-        <Divider />
-        <div className={`flex flex-wrap`}>
-          <div className={`w-5/6 sm:w-1/2 p-6 mt-20`}>
-            <h3
-              className={`text-3xl text-gray-800 font-bold leading-none mb-3`}
-            >
-              {firstItem?.title}
-            </h3>
-            <p className={`text-gray-600`}>{firstItem?.description}</p>
-          </div>
-          <div className={`w-full sm:w-1/2 p-6`}>
-            <img
-              className="h-6/6"
-              src={firstItem?.img}
-              alt={firstItem?.title}
-            />
-          </div>
         </div>
-        <div className={`flex flex-wrap flex-col-reverse sm:flex-row`}>
-          <div className={`w-full sm:w-1/2 p-6`}>
-            <img
-              className="h-6/6"
-              src={secondItem?.img}
-              alt={secondItem?.title}
-            />
-          </div>
-          <div className={`w-full sm:w-1/2 p-6 mt-20`}>
-            <div className={`align-middle`}>
-              <h3
-                className={`text-3xl text-gray-800 font-bold leading-none mb-3`}
-              >
-                {secondItem?.title}
-              </h3>
-              <p className={`text-gray-600 mb-8`}>{secondItem?.description}</p>
+
+        {/* ======= WASTE PRODUCTS ======= */}
+        <h2 className="text-3xl font-bold text-center mb-6">Byproducts (Waste)</h2>
+        <p className="text-center text-gray-700 mb-8">
+          Our factory waste is naturally reused for farming and animal feeding.
+        </p>
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {wasteProducts.map((item, index) => (
+            <div
+              key={index}
+              onClick={() => setSelected(item)}
+              className="relative cursor-pointer overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+            >
+              <img
+                src={item.img}
+                alt={item.name}
+                className="h-64 w-full object-cover"
+              />
+              <div className="absolute bottom-0 w-full bg-green-800 bg-opacity-70 text-white p-4">
+                <p className="font-semibold text-lg">{item.name}</p>
+                <p className="text-sm mt-1">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* ======= PROFESSIONAL POPUP ======= */}
+        {selected && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center z-50 p-4"
+            onClick={() => setSelected(null)}
+          >
+            <div
+              className="flex flex-col md:flex-row bg-transparent w-full max-w-6xl h-auto md:h-[70vh] relative overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* IMAGE LEFT */}
+              <div className="md:w-1/2 flex justify-center items-center">
+                <img
+                  src={selected.img}
+                  alt={selected.name}
+                  className="object-contain h-full md:h-[90%] rounded-lg"
+                />
+              </div>
+
+              {/* INFO RIGHT */}
+              <div className="md:w-1/2 relative">
+                {/* Scrollable content */}
+                <div
+                  ref={scrollRef}
+                  className="text-white p-6 h-[70vh] overflow-y-auto pr-12"
+                >
+                  <h2 className="text-3xl font-bold mb-3">{selected.name}</h2>
+                  <p className="mb-4">{selected.description}</p>
+
+                  {selected.nutrition && (
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-lg mb-2">Nutrition</h4>
+                      <ul className="list-disc list-inside">
+                        <li>Calories: {selected.nutrition.calories}</li>
+                        <li>Protein: {selected.nutrition.protein}</li>
+                        <li>Carbs: {selected.nutrition.carbs}</li>
+                        <li>Fat: {selected.nutrition.fat}</li>
+                      </ul>
+                    </div>
+                  )}
+
+                  {selected.details && (
+                    <div>
+                      {selected.details.process && (
+                        <p className="mb-2">
+                          <span className="font-semibold">Process:</span> {selected.details.process}
+                        </p>
+                      )}
+                      {selected.details.uses && (
+                        <p className="mb-2">
+                          <span className="font-semibold">Uses:</span> {selected.details.uses.join(", ")}
+                        </p>
+                      )}
+                      {selected.details.benefits && (
+                        <p>
+                          <span className="font-semibold">Benefits:</span> {selected.details.benefits.join(", ")}
+                        </p>
+                      )}
+                    </div>
+                  )}
+                </div>
+
+                {/* Buttons */}
+                <button
+                  onClick={() => setSelected(null)}
+                  className="absolute top-4 right-4 text-white text-3xl font-bold"
+                >
+                  ✖
+                </button>
+                <button
+                  onClick={() => scrollRef.current.scrollTo({ top: 0, behavior: "smooth" })}
+                  className="absolute right-4 bottom-4 bg-white text-black rounded-full p-2 shadow-lg hover:bg-gray-200 transition"
+                  title="Scroll to Top"
+                >
+                  ↑
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        )}
+
+        {/* ======= PAGE SCROLL-TO-TOP BUTTON ======= */}
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed right-4 bottom-4 bg-black text-white rounded-full p-3 shadow-lg hover:bg-gray-800 transition"
+          title="Scroll to Top of Page"
+        >
+          ↑
+        </button>
       </div>
     </section>
   );
