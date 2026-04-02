@@ -40,14 +40,15 @@ const OurJourney: FC = () => {
     <section className="journey-section">
       <style>{`
         .journey-section {
-          padding: 80px 20px;
+          padding: 100px 40px;
           background-color: #f9fafb;
         }
 
         /* Container forced to 896px width */
         .carousel-container {
           position: relative;
-          max-width: 896px; 
+          max-width: 1200px; 
+          width:100%;
           margin: 0 auto 64px;
         }
 
@@ -73,10 +74,10 @@ const OurJourney: FC = () => {
         }
 
         .carousel-slide img {
-          width: 896px;
-          height: 504px;
+          width: 100%;
+          height: 100%;
           object-fit: cover;
-          display: block;
+    
         }
 
         .nav-btn {
@@ -126,13 +127,19 @@ const OurJourney: FC = () => {
           gap: 20px;
           align-items: start;
           transition: all 0.3s ease;
+          
         }
 
         .milestone-card h3 {
           color: var(--color-secondary);
           font-weight: 700;
           margin: 0;
+          line-height: 1.2;
         }
+          .milestone-card .content p {
+            margin-top: 0;      
+            line-height: 1.5;
+      }
 
         @media (max-width: 936px) {
           .nav-btn.prev { left: 10px; }
@@ -167,10 +174,10 @@ const OurJourney: FC = () => {
             </div>
           </div>
 
-          <button className="nav-btn prev left-[-24px]" onClick={prevSlide}>
+          <button className="nav-btn prev left-[10px]" onClick={prevSlide}>
             <ChevronLeft size={24} />
           </button>
-          <button className="nav-btn next right-[-24px]" onClick={nextSlide}>
+          <button className="nav-btn next right-[10px]" onClick={nextSlide}>
             <ChevronRight size={24} />
           </button>
 

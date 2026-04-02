@@ -5,7 +5,7 @@ const CommitmentCards = () => {
     <section className="commitment-section">
       <style>{`
         .commitment-section {
-          padding: 80px 20px;
+          padding: 100px 40px;
           background-color: #ffffff;
         }
 
@@ -27,7 +27,7 @@ const CommitmentCards = () => {
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: spcae-between;
         }
 
         .card:hover {
@@ -45,6 +45,7 @@ const CommitmentCards = () => {
         }
 
         .card h3 {
+      
           font-size: 2rem;
           font-weight: 700;
           margin-bottom: 16px;
@@ -95,6 +96,7 @@ const CommitmentCards = () => {
                 oils that serve as the foundation for nutritious meals.
               </p>
               <p className="sub-text">
+                 
                 
               </p>
             </div>

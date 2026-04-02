@@ -4,12 +4,13 @@ import About from '../components/About';
 import Analytics from '../components/Analytics';
 import Canvas from '../components/Canvas';
 import Features from '../components/Features';
-import Header from '../components/Menu';
+import Header from '../components/Header';
 import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
 import MainHeroImage from '../components/MainHeroImage';
 import Pricing from '../components/Pricing';
 import Product from '../components/Product';
+import ContactUs from '../components/ContactUs';   // ✅ FIXED IMPORT
 
 const App = () => {
   return (
@@ -25,28 +26,42 @@ const App = () => {
         </div>
         <MainHeroImage />
       </div>
+
       <Canvas />
+
       <LazyShow>
         <>
           <Product />
           <Canvas />
         </>
       </LazyShow>
+
       <LazyShow>
         <>
           <Features />
           <Canvas />
         </>
       </LazyShow>
+
       <LazyShow>
         <Pricing />
       </LazyShow>
+
       <LazyShow>
         <>
           <Canvas />
           <About />
         </>
       </LazyShow>
+
+      {/* ⭐ ADD CONTACT US HERE */}
+      <LazyShow>
+        <>
+          <Canvas />
+          <ContactUs />
+        </>
+      </LazyShow>
+
       <Analytics />
     </div>
   );
