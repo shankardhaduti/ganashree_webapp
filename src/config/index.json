@@ -4,9 +4,12 @@
     "logo": "/assets/images/logo.png"
   },
   "navigation": [
+    
+    { "name": "Home", "href": "mainhero" },
+    { "name": "About", "href": "about" },
     { "name": "Product", "href": "product" },
-    { "name": "Features", "href": "features" },
-    { "name": "Pricing", "href": "pricing" }
+    { "name": "Contact Us", "href": "contact" }
+    
   ],
   "callToAction": {
     "text": "Get started",

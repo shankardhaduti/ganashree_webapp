@@ -1,7 +1,13 @@
 // @ts-nocheck
 import React from "react";
 import config from "../config/index.json";
-
+import { Link } from "react-scroll";
+import TwitterIcon from '@mui/icons-material/Twitter';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import PhoneIcon from '@mui/icons-material/Phone';
+import MessageIcon from "@mui/icons-material/Message"
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 const Footer = () => {
   const { company, navigation } = config;
 
@@ -13,9 +19,9 @@ const Footer = () => {
     email: "contact@ganshrioil.org.in",
     address: "Banhatti, Karnataka, India",
     socialMedia: {
-      whatsapp: "https://wa.me/918087678977",
-      instagram: "https://instagram.com/",
-      twitter: "https://twitter.com/",
+      whatsapp: WhatsAppIcon,
+      instagram: InstagramIcon,
+      twitter: TwitterIcon,
     },
   };
 
@@ -35,9 +41,15 @@ const Footer = () => {
           <ul className="space-y-2">
             {navigation.map((item) => (
               <li key={item.name}>
-                <a href={`/${item.href}`} className="text-gray-300 hover:text-white transition">
+                <Link
+                  to={item.href}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  className="text-gray-300 hover:text-white transition cursor-pointer"
+                >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -48,57 +60,67 @@ const Footer = () => {
           <h4 className="text-lg font-semibold mb-4">Contact</h4>
 
           {/* Phone 1 */}
-          <a href={`tel:${footer.phone1}`} className="flex items-center gap-2 text-gray-300 hover:text-white">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011-.24 11.72 11.72 0 003.66.58 1 1 0 011 1V21a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.47a1 1 0 011 1 11.72 11.72 0 00.58 3.66 1 1 0 01-.24 1z"/>
-            </svg>
-            {footer.phone1}
-          </a>
+          <a href={`tel:${footer.phone2}`} className="flex items-center py-1 gap-2 text-gray-300 hover:text-white transition">
+  <PhoneIcon sx={{ fontSize: 20 }} /><span>{footer.phone1}</span>
+  
+</a>
 
           {/* Phone 2 */}
-          <a href={`tel:${footer.phone2}`} className="flex items-center gap-2 text-gray-300 hover:text-white mt-2">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011-.24 11.72 11.72 0 003.66.58 1 1 0 011 1V21a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.47a1 1 0 011 1 11.72 11.72 0 00.58 3.66 1 1 0 01-.24 1z"/>
-            </svg>
-            {footer.phone2}
-          </a>
+           
+<a href={`tel:${footer.phone2}`} className="flex items-center  py-1 gap-2 text-gray-300 hover:text-white transition">
+  <PhoneIcon sx={{ fontSize: 20 }} /><span>{footer.phone2}</span>
+  
+</a>
+          
+          
 
           {/* Email */}
-          <a href={`mailto:${footer.email}`} className="flex items-center gap-2 text-gray-300 hover:text-white mt-2">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
-            {footer.email}
-          </a>
+          <a href={`tel:${footer.email}`} className="flex items-center  py-1 gap-2 text-gray-300 hover:text-white transition">
+  <MessageIcon sx={{ fontSize: 20 }} /><span>{footer.email}</span>
+  
+</a>
 
           {/* Location */}
-          <a
-            href={`https://maps.google.com/?q=${encodeURIComponent(footer.address)}`}
-            target="_blank"
-            className="flex items-center gap-2 text-gray-300 hover:text-white mt-2"
-          >
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 119.5 9 2.5 2.5 0 0112 11.5z"/>
-            </svg>
-            {footer.address}
-          </a>
+              <a href={`tel:${footer.address}`} className="flex items-center py-1 gap-2 text-gray-300 hover:text-white transition">
+  <LocationOnIcon sx={{ fontSize: 20 }} /><span>{footer.address}</span>
+  
+</a>
         </div>
 
         {/* Social Media */}
         <div>
           <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
           <div className="flex gap-4">
-            <a href={footer.socialMedia.whatsapp} target="_blank">
-              <img src="/assets/icons/whatsapp.svg" className="h-6" />
-            </a>
+            <Link
+                  to={footer.socialMedia.whatsapp}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  className="text-gray-300 hover:text-white transition cursor-pointer"
+                >
+                  <WhatsAppIcon/>
+                </Link>
+          
 
-            <a href={footer.socialMedia.instagram} target="_blank">
-              <img src="/assets/icons/instagram.svg" className="h-6" />
-            </a>
+                <Link
+                  to={footer.socialMedia.twitter}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  className="text-gray-300 hover:text-white transition cursor-pointer"
+                >
+                  <TwitterIcon/>
+                </Link>
 
-            <a href={footer.socialMedia.twitter} target="_blank">
-              <img src="/assets/icons/twitter.svg" className="h-6" />
-            </a>
+                 <Link
+                  to={footer.socialMedia.instagram}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  className="text-gray-300 hover:text-white transition cursor-pointer"
+                >
+                  <InstagramIcon/>
+                </Link>
           </div>
         </div>
       </div>

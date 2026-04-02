@@ -2,6 +2,7 @@ import React from 'react';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import PeopleIcon from '@mui/icons-material/People';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import ScrollToTop from './ScrollToTop';
 
 const stats = [
   {
@@ -113,7 +114,8 @@ const ImpactPage = () => {
       </section>
 
       {/* 3. COMPLIANCE SECTION: Focused on readability */}
-      <section className="py-16 md:py-24 px-4 md:px-8 bg-gray-50">
+      
+        <section className="pt-16 md:pt-24 pb-0 px-4 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white overflow-hidden rounded-3xl shadow-xl border border-gray-100">
             <div className="bg-red-700 py-6 md:py-8 px-6">
@@ -154,7 +156,9 @@ const ImpactPage = () => {
             </div>
           </div>
         </div>
+         <ScrollToTop/>
       </section>
+     
     </main>
   );
 };

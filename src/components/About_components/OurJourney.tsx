@@ -9,6 +9,7 @@ interface Milestone {
 const OurJourney: FC = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const images: string[] = [
+    
     "./assets/images/WhatsApp Image 2026-03-31 at 3.49.19 PM.jpeg",
     "./assets/images/WhatsApp Image 2026-03-30 at 8.27.27 PM.jpeg", 
     "./assets/images/WhatsApp Image 2026-03-30 at 8.27.23 PM.jpeg", 
@@ -36,10 +37,9 @@ const OurJourney: FC = () => {
           --color-secondary: #7a1f26;
         }
         .journey-section {
-          padding: 60px 20px; /* Reduced padding for mobile */
-          background-color: #f9fafb;
-          overflow-x: hidden;
-        }
+  padding: 0 00px 100px 40px; /* Top padding is now 0 */
+  background-color: #ffffff; /* Background matches ImpactPage */
+}
         .carousel-container {
           position: relative;
           max-width: 1000px; 
@@ -135,6 +135,7 @@ const OurJourney: FC = () => {
         @media (min-width: 768px) {
           .journey-section {
             padding: 100px 40px;
+            
           }
           .carousel-viewport {
             aspect-ratio: 16 / 9; /* Wider for desktop */

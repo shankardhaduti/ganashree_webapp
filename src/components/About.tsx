@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 import OurJourney from "./About_components/OurJourney";
 import CommitmentCards from "./About_components/CommitmentCards";
