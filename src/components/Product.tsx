@@ -15,7 +15,7 @@ const Product = () => {
       <div className="max-w-6xl mx-auto px-4 py-12">
 
         {/* ======= NORMAL PRODUCTS (OILS) ======= */}
-        <h2 className="text-3xl font-bold text-center mb-6">Our Oils</h2>
+        <h2 className="text-3xl font-bold text-center mb-6">Our Products</h2>
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {normalProducts.map((item, index) => (
             <div
@@ -130,26 +130,14 @@ const Product = () => {
                 >
                   ✖
                 </button>
-                <button
-                  onClick={() => scrollRef.current.scrollTo({ top: 0, behavior: "smooth" })}
-                  className="absolute right-4 bottom-4 bg-white text-black rounded-full p-2 shadow-lg hover:bg-gray-200 transition"
-                  title="Scroll to Top"
-                >
-                  ↑
-                </button>
+                
               </div>
             </div>
           </div>
         )}
 
         {/* ======= PAGE SCROLL-TO-TOP BUTTON ======= */}
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed right-4 bottom-4 bg-black text-white rounded-full p-3 shadow-lg hover:bg-gray-800 transition"
-          title="Scroll to Top of Page"
-        >
-          ↑
-        </button>
+        
       </div>
     </section>
   );

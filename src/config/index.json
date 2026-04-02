@@ -4,29 +4,15 @@
     "logo": "/assets/images/logo.png"
   },
   "navigation": [
-    {
-      "name": "Product",
-      "href": "product"
-    },
-    {
-      "name": "Features",
-      "href": "features"
-    },
-
-    {
-      "name": "Pricing",
-      "href": "pricing"
-    },
-    {
-      "name": "About",
-      "href": "about"
-    }
+    { "name": "Product", "href": "product" },
+    { "name": "Features", "href": "features" },
+    { "name": "Pricing", "href": "pricing" }
   ],
   "callToAction": {
     "text": "Get started",
     "href": "#"
   },
-  "mainHero": {
+    "mainHero": {
     "title": "Ganshri Oil Merchants",
     "subtitle": "Authentic Wood-Pressed Oils for a Healthier, Natural Lifestyle.",
     "description": "At Ganshri Oil Merchants, we bring you pure and traditionally wood-pressed edible oils. Our Ghana-made oils retain their natural nutrients and authentic flavour. We produce high-quality Groundnut, Safflower, Coconut, Sunflower, Sesame, Flaxseed, Mustard, and Castor Oils, along with Groundnut Cake for cattle feed. With purity, freshness, and trust at the core, Ganshri ensures healthy and chemical-free oils for your family.",
@@ -40,115 +26,113 @@
       "href": "mailto:issaafakattan@gmail.com?subject=I like react landing page!"
     }
   },
+
   "product": {
-    "title": "React landing page 2021",
+    "title": "Our Factory Products",
     "items": [
       {
-        "title": "A plug n play template",
-        "description": "Just edit the config.json file with details about your company and voila your beautiful state of the art landing page is ready to go live! Remember to also update your assets, add any images you want to show to /assets/images and link them in the config.json",
-        "img": "/assets/images/product1.jpg"
+        "name": "Sunflower Oil",
+        "description": "Pure sunflower oil made in our factory",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1WNFkw_7q6i76_II-lyiqTKOk0Q7AH_w26g&s",
+        "nutrition": { "calories": 52, "protein": "0.3g", "carbs": "14g", "fat": "0.2g" },
+        "details": { "process": "Cold pressed", "uses": ["Cooking", "Salads"], "benefits": ["Heart friendly", "Light taste"] }
       },
       {
-        "title": "Make it your own!",
-        "description": "Play around with the theme.ts file and configure the color palette to match the branding of your company! If you're feeling wild, maybe change some tailwind css as well!",
-        "img": "/assets/images/product2.jpg"
-      }
+        "name": "Groundnut Oil",
+        "description": "Traditional groundnut oil",
+        "img": "https://olivewellnessinstitute.org/wp-content/uploads/2024/02/shutterstock_150359531-scaled.jpg",
+        "nutrition": { "calories": 56, "protein": "0.4g", "carbs": "13g", "fat": "0.5g" },
+        "details": { "process": "Wooden press", "uses": ["Cooking", "Deep frying"], "benefits": ["Rich flavor", "High antioxidants"] }
+      },
+      {
+        "name": "Coconut Oil",
+        "description": "Cold pressed coconut oil",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7VjrGpCxFEBrNTr80Pxy6SXpPLgwBbwJDvQ&s",
+        "nutrition": { "calories": 90, "protein": "0g", "carbs": "0g", "fat": "10g" },
+        "details": { "process": "Cold pressed from fresh coconuts", "uses": ["Hair care", "Cooking"], "benefits": ["Boosts immunity", "Healthy skin"] }
+      },
+      {
+        "name": "Sesame Oil",
+        "description": "Aromatic sesame oil",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7VjrGpCxFEBrNTr80Pxy6SXpPLgwBbwJDvQ&s",
+        "nutrition": { "calories": 120, "protein": "0g", "carbs": "0g", "fat": "14g" },
+        "details": { "process": "Roasted seeds extraction", "uses": ["Cooking", "Salads"], "benefits": ["Rich aroma", "Boosts metabolism"] }
+      },
+      {
+        "name": "Olive Oil",
+        "description": "Extra virgin olive oil",
+        "img": "https://img.freepik.com/free-photo/soybean-oil-soybean-food-beverage-products-food-nutrition-concept_1150-26351.jpg?semt=ais_incoming&w=740&q=80",
+        "nutrition": { "calories": 119, "protein": "0g", "carbs": "0g", "fat": "13.5g" },
+        "details": { "process": "Cold pressed", "uses": ["Cooking", "Salads"], "benefits": ["Heart health", "Rich in antioxidants"] }
+      },
+      {
+        "name": "Mustard Oil",
+        "description": "Traditional mustard oil",
+        "img": "https://images.squarespace-cdn.com/content/v1/5f04b0aa458da11138252c08/979d2d6a-3417-4805-968c-d5bf081fd85f/industrial-seed-oils-processed-foods-kitchen.jpg",
+        "nutrition": { "calories": 124, "protein": "0g", "carbs": "0g", "fat": "14g" },
+        "details": { "process": "Cold pressed from mustard seeds", "uses": ["Cooking", "Pickles"], "benefits": ["Boosts metabolism", "Rich flavor"] }
+      },
+      {
+        "name": "Rice Bran Oil",
+        "description": "Healthy rice bran oil",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ffr2_o4zfqijGjctyWo-Sz5rln9_Axf-rA&s",
+        "nutrition": { "calories": 120, "protein": "0g", "carbs": "0g", "fat": "13g" },
+        "details": { "process": "Refined from rice bran", "uses": ["Cooking", "Deep frying"], "benefits": ["Lowers cholesterol", "Light taste"] }
+      },
+      {
+        "name": "Palm Oil",
+        "description": "Pure palm oil",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ffr2_o4zfqijGjctyWo-Sz5rln9_Axf-rA&s",
+        "nutrition": { "calories": 120, "protein": "0g", "carbs": "0g", "fat": "14g" },
+        "details": { "process": "Refined and filtered", "uses": ["Cooking", "Baking"], "benefits": ["High energy", "Neutral taste"] }
+      },
+      {
+        "name": "Avocado Oil",
+        "description": "Cold pressed avocado oil",
+        "img": "https://images.squarespace-cdn.com/content/v1/5f04b0aa458da11138252c08/979d2d6a-3417-4805-968c-d5bf081fd85f/industrial-seed-oils-processed-foods-kitchen.jpg",
+        "nutrition": { "calories": 160, "protein": "0g", "carbs": "0g", "fat": "18g" },
+        "details": { "process": "Cold pressed", "uses": ["Cooking", "Salads"], "benefits": ["Heart friendly", "Rich in Vitamin E"] }
+      },
+      {
+        "name": "Flaxseed Oil",
+        "description": "Organic flaxseed oil",
+        "img": "https://images.squarespace-cdn.com/content/v1/5f04b0aa458da11138252c08/979d2d6a-3417-4805-968c-d5bf081fd85f/industrial-seed-oils-processed-foods-kitchen.jpg",
+        "nutrition": { "calories": 120, "protein": "0g", "carbs": "0g", "fat": "14g" },
+        "details": { "process": "Cold pressed", "uses": ["Salads", "Supplements"], "benefits": ["Omega-3 source", "Improves digestion"] }
+      },
+      {
+  "name": "Oil  Waste",
+  "description": "Byproduct used as organic fertilizer and nutritious feed for cows and goats.",
+  "img": "https://5.imimg.com/data5/ECOM/Default/2022/11/SS/LR/BF/71853916/image-f536a433-6c2d-4e73-a8cf-47445a876d99.jpg",
+  "isByproduct": true,
+  "details": {
+    "uses": ["Cow feed", "Goat feed", "Organic fertilizer", "Soil improvement"]
+  }
+},
+{
+  "name": "Oil Cake / Waste",
+  "description": "Byproduct used as organic fertilizer and nutritious feed for cows and goats.",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs3s9illWKXvJEyuHNAnscb7hI1HJ5XHmIsg&s",
+  "isByproduct": true,
+  "details": {
+    "uses": ["Cow feed", "Goat feed", "Organic fertilizer", "Soil improvement"]
+  }
+}
     ]
   },
+  
   "features": {
-    "title": "Latest & greatest ",
+    "title": "Latest & greatest",
     "subtitle": "All the best technologies out there!",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
-    "items": [
-      {
-        "name": "React.js",
-        "description": "React is a free and open-source front-end JavaScript library for building user interfaces or UI components.",
-        "icon": "/assets/images/react.png"
-      },
-      {
-        "name": "Tailwind",
-        "description": "Tailwind CSS is a highly customizable, low-level CSS framework for quickly creating beautiful designs without any annoying opinionated stylesheet nonsense.",
-        "icon": "/assets/images/tailwindcss.svg"
-      },
-      {
-        "name": "Next.js",
-        "description": "Next.js is a framework for server-rendered React applications using Next.js.",
-        "icon": "/assets/images/nextjs.svg"
-      },
-      {
-        "name": "Typescript",
-        "description": "TypeScript is a programming language developed and maintained by Microsoft.",
-        "icon": "/assets/images/ts.png"
-      }
-    ]
+    "description": "Feature description",
+    "items": []
   },
   "pricing": {
     "title": "Pricing",
-    "items": [
-      {
-        "name": "Free",
-        "price": "$0",
-        "priceDetails": "for one user",
-        "features": [
-          "1 user",
-          "Basic Support",
-          "1 GB of storage",
-          "Email support"
-        ]
-      },
-      {
-        "name": "Pro",
-        "price": "$15",
-        "priceDetails": "per user",
-
-        "features": [
-          "5 users",
-          "Priority Support",
-          "10 GB of storage",
-          "Phone and Email support"
-        ]
-      },
-      {
-        "name": "Enterprise",
-        "price": "$29",
-        "priceDetails": "per user",
-        "features": [
-          "50 users",
-          "24/7 Support",
-          "100 GB of storage",
-          "Phone and Email support"
-        ]
-      }
-    ]
+    "items": []
   },
   "about": {
-    "sections": [
-      {
-        "name": "Something",
-        "href": "#",
-        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-      },
-      {
-        "name": "Something",
-        "href": "#",
-        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-      },
-      {
-        "name": "Something",
-        "href": "#",
-        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-      },
-      {
-        "name": "Something",
-        "href": "#",
-        "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-      }
-    ],
-    "socialMedia": {
-      "github": "https://github.com/issaafalkattan",
-      "twitter": "https://twitter.com/issaafkattan",
-      "linkedin": "https://www.linkedin.com/in/issaaf-kattan/"
-    }
+    "sections": [],
+    "socialMedia": {}
   }
-}
-
+} 
