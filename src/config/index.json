@@ -27,16 +27,16 @@
     "href": "#"
   },
   "mainHero": {
-    "title": "Use me as your",
-    "subtitle": "landing page.",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+    "title": "Ganshri Oil Merchants",
+    "subtitle": "Authentic Wood-Pressed Oils for a Healthier, Natural Lifestyle.",
+    "description": "At Ganshri Oil Merchants, we bring you pure and traditionally wood-pressed edible oils. Our Ghana-made oils retain their natural nutrients and authentic flavour. We produce high-quality Groundnut, Safflower, Coconut, Sunflower, Sesame, Flaxseed, Mustard, and Castor Oils, along with Groundnut Cake for cattle feed. With purity, freshness, and trust at the core, Ganshri ensures healthy and chemical-free oils for your family.",
     "img": "/assets/images/happyTeam.jpeg",
     "primaryAction": {
       "text": "Get started",
       "href": "#"
     },
     "secondaryAction": {
-      "text": "Email us",
+      "text": "Contact us",
       "href": "mailto:issaafakattan@gmail.com?subject=I like react landing page!"
     }
   },
