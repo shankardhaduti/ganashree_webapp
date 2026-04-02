@@ -32,10 +32,15 @@ const Menu = () => {
             {/* LOGO */}
             <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
               <div className="flex items-center justify-between w-full md:w-auto">
-                <a href="#">
+                <Link
+                  to="mainhero"
+                  smooth={true}
+                  duration={500}
+                  className="cursor-pointer"
+                >
                   <span className="sr-only">{companyName}</span>
                   <img alt="logo" className="h-16 w-auto sm:h-16" src={logo} />
-                </a>
+                </Link>
 
                 {/* MOBILE MENU BUTTON */}
                 <div className="-mr-2 flex items-center md:hidden">

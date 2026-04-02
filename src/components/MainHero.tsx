@@ -5,7 +5,7 @@ const MainHero = () => {
   const { mainHero } = config;
 
   return (
-    <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-10 sm:px-6 md:mt-14 lg:mt-16 lg:px-8">
+    <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-10 sm:px-6 md:mt-14 lg:mt-16 lg:px-8" id='mainhero'>
       <div className="sm:text-center lg:text-left">
         {/* TITLE (BIGGER) + SUBTITLE */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
