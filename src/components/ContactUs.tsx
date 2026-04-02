@@ -22,11 +22,9 @@ const ContactUs = () => {
   const validateInputs = () => {
     let newErrors: any = {};
 
-    if (!nameRegex.test(form.name))
-      newErrors.name = "Enter a valid full name";
+    if (!nameRegex.test(form.name)) newErrors.name = "Enter a valid full name";
 
-    if (!emailRegex.test(form.email))
-      newErrors.email = "Enter a valid email";
+    if (!emailRegex.test(form.email)) newErrors.email = "Enter a valid email";
 
     if (!phoneRegex.test(form.phone))
       newErrors.phone = "Enter a valid 10-digit mobile number";
@@ -44,10 +42,7 @@ const ContactUs = () => {
     formData.append("name", form.name);
     formData.append("email", form.email);
     formData.append("phone", form.phone);
-    formData.append(
-      "message",
-      `Subject: ${form.subject}\n\n${form.message}`
-    );
+    formData.append("message", `Subject: ${form.subject}\n\n${form.message}`);
     formData.append("form_type", "Contact Form");
 
     try {
@@ -146,9 +141,7 @@ const ContactUs = () => {
               <input
                 className="w-full border p-2 rounded"
                 value={form.name}
-                onChange={(e) =>
-                  setForm({ ...form, name: e.target.value })
-                }
+                onChange={(e) => setForm({ ...form, name: e.target.value })}
                 required
               />
               {errors.name && (
@@ -163,9 +156,7 @@ const ContactUs = () => {
                 type="email"
                 className="w-full border p-2 rounded"
                 value={form.email}
-                onChange={(e) =>
-                  setForm({ ...form, email: e.target.value })
-                }
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
                 required
               />
               {errors.email && (
@@ -179,9 +170,7 @@ const ContactUs = () => {
               <input
                 className="w-full border p-2 rounded"
                 value={form.phone}
-                onChange={(e) =>
-                  setForm({ ...form, phone: e.target.value })
-                }
+                onChange={(e) => setForm({ ...form, phone: e.target.value })}
                 required
               />
               {errors.phone && (
@@ -195,9 +184,7 @@ const ContactUs = () => {
               <input
                 className="w-full border p-2 rounded"
                 value={form.subject}
-                onChange={(e) =>
-                  setForm({ ...form, subject: e.target.value })
-                }
+                onChange={(e) => setForm({ ...form, subject: e.target.value })}
                 required
               />
             </div>
@@ -209,9 +196,7 @@ const ContactUs = () => {
                 rows={5}
                 className="w-full border p-2 rounded"
                 value={form.message}
-                onChange={(e) =>
-                  setForm({ ...form, message: e.target.value })
-                }
+                onChange={(e) => setForm({ ...form, message: e.target.value })}
                 required
               ></textarea>
             </div>

@@ -1,5 +1,5 @@
-import React from 'react';
-import config from '../config/index.json';
+import React from "react";
+import config from "../config/index.json";
 
 const MainHero = () => {
   const { mainHero } = config;
@@ -7,10 +7,9 @@ const MainHero = () => {
   return (
     <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-10 sm:px-6 md:mt-14 lg:mt-16 lg:px-8" id='mainhero'>
       <div className="sm:text-center lg:text-left">
-
         {/* TITLE (BIGGER) + SUBTITLE */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-          <span className="inline">{mainHero.title}</span>{' '}
+          <span className="inline">{mainHero.title}</span>{" "}
           <span className="inline text-primary text-2xl sm:text-3xl md:text-4xl">
             {mainHero.subtitle}
           </span>
@@ -41,7 +40,6 @@ const MainHero = () => {
             </a>
           </div>
         </div>
-
       </div>
     </main>
   );
