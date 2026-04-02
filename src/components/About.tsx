@@ -10,10 +10,13 @@ import ImpactPage from "./About_components/ImpactPage";
 function About(){
   return(
     <>
-    
-    <ImpactPage/>
+    <section id="about">
+      <ImpactPage/>
     <OurJourney/>
     <CommitmentCards/>
+
+    </section>
+    
 
     </>
 
