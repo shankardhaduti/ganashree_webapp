@@ -1,7 +1,7 @@
-import React from 'react';
-import LocalShippingIcon from '@mui/icons-material/LocalShipping';
-import PeopleIcon from '@mui/icons-material/People';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import React from "react";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import PeopleIcon from "@mui/icons-material/People";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const stats = [
   {
@@ -24,13 +24,13 @@ const stats = [
     label: "Healthcare",
     desc: "Includes cholesterol free for a healthier body",
     gradient: "linear-gradient(135deg, #b91c1c, #7a1f26)",
-  }
+  },
 ];
 
 const ImpactPage = () => {
   return (
     <main className="bg-white min-h-screen w-full overflow-x-hidden">
-        <h2 className="text-3xl font-bold text-center mb-6">About Us</h2>
+      <h2 className="text-3xl font-bold text-center mb-6">About Us</h2>
 
       {/* 1. HERO SECTION: Handles extreme narrow (320px) and wide desktop */}
       <section className="relative min-h-[80vh] md:min-h-[75vh] flex items-center justify-center text-center px-4 md:px-6 py-16 bg-gradient-to-br from-red-700 to-red-500">
@@ -42,18 +42,20 @@ const ImpactPage = () => {
 
           {/* Heading: Fluid scaling from 30px to 60px */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-[1.1] md:leading-tight">
-            Ganha Shree BK Muragod:<br className="hidden sm:block" />
+            Ganha Shree BK Muragod:
+            <br className="hidden sm:block" />
             <span className="text-white/90"> Quality You Can Trust</span>
           </h1>
 
           {/* Description: Controlled max-width prevents long lines on desktop */}
           <div className="mt-6 space-y-4 max-w-2xl mx-auto">
             <p className="text-white/90 text-base sm:text-lg md:text-xl">
-              Serving Banahatti since 2025 with a commitment to excellence
-              in vegetable oil processing and retail services.
+              Serving Banahatti since 2025 with a commitment to excellence in
+              vegetable oil processing and retail services.
             </p>
             <p className="text-white/70 text-xs sm:text-sm italic border-t border-white/20 pt-4 inline-block px-4">
-              Operating under the strict standards of the Food Safety and Standards Act, 2006.
+              Operating under the strict standards of the Food Safety and
+              Standards Act, 2006.
             </p>
           </div>
 
@@ -121,12 +123,16 @@ const ImpactPage = () => {
                 Quality Assurance & Compliance
               </h2>
             </div>
-            
+
             <div className="p-8 md:p-16 text-center">
               <div className="text-gray-600 space-y-6 md:space-y-8 text-base md:text-xl leading-relaxed">
                 <p>
-                  At <strong className="text-gray-900">Ganha Shree BK Muragod</strong>, your health and safety are our highest priorities.
-                  We operate in strict accordance with the FSSAI.
+                  At{" "}
+                  <strong className="text-gray-900">
+                    Ganha Shree BK Muragod
+                  </strong>
+                  , your health and safety are our highest priorities. We
+                  operate in strict accordance with the FSSAI.
                 </p>
 
                 {/* Registration Number: break-all ensures no overflow on 320px screens */}
@@ -142,12 +148,22 @@ const ImpactPage = () => {
                 {/* Sub-info grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8 pt-6 text-left">
                   <div className="p-5 rounded-2xl border border-gray-100 bg-white shadow-sm">
-                    <p className="font-bold text-gray-900 mb-2">Regulatory Compliance</p>
-                    <p className="text-sm md:text-base text-gray-500">Registered under the FSS Act, 2006, as mandated by the Government of Karnataka.</p>
+                    <p className="font-bold text-gray-900 mb-2">
+                      Regulatory Compliance
+                    </p>
+                    <p className="text-sm md:text-base text-gray-500">
+                      Registered under the FSS Act, 2006, as mandated by the
+                      Government of Karnataka.
+                    </p>
                   </div>
                   <div className="p-5 rounded-2xl border border-gray-100 bg-white shadow-sm">
-                    <p className="font-bold text-gray-900 mb-2">Safety Standards</p>
-                    <p className="text-sm md:text-base text-gray-500">We comply with all provisions for petty food businesses to ensure total transparency.</p>
+                    <p className="font-bold text-gray-900 mb-2">
+                      Safety Standards
+                    </p>
+                    <p className="text-sm md:text-base text-gray-500">
+                      We comply with all provisions for petty food businesses to
+                      ensure total transparency.
+                    </p>
                   </div>
                 </div>
               </div>
