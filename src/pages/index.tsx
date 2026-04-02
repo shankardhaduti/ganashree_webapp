@@ -11,6 +11,7 @@ import MainHeroImage from '../components/MainHeroImage';
 import Pricing from '../components/Pricing';
 import Product from '../components/Product';
 import ContactUs from '../components/ContactUs';   // ✅ FIXED IMPORT
+import Footer from '../components/Fotter';
 
 const App = () => {
   return (
@@ -50,16 +51,22 @@ const App = () => {
     
 
       {/* ⭐ ADD CONTACT US HERE */}
-      <LazyShow>
-        <>
-          <Canvas />
-          <ContactUs />
-        </>
-      </LazyShow>
+   
   <LazyShow>
         <>
           <Canvas />
           <About />
+        </>
+      </LazyShow>
+         <LazyShow>
+        <>
+          <Canvas />
+          <ContactUs />
+        </>
+      </LazyShow>   <LazyShow>
+        <>
+          <Canvas />
+          <Footer />
         </>
       </LazyShow>
       <Analytics />
