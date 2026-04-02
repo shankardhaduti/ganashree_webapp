@@ -10,7 +10,7 @@ import MainHero from '../components/MainHero';
 import MainHeroImage from '../components/MainHeroImage';
 import Pricing from '../components/Pricing';
 import Product from '../components/Product';
-
+import ContactUs from '../components/ContactUs';   // ✅ FIXED IMPORT
 
 const App = () => {
   return (
@@ -26,28 +26,42 @@ const App = () => {
         </div>
         <MainHeroImage />
       </div>
+
       <Canvas />
+
       <LazyShow>
         <>
           <Product />
           <Canvas />
         </>
       </LazyShow>
+
       <LazyShow>
         <>
           <Features />
           <Canvas />
         </>
       </LazyShow>
+
       <LazyShow>
         <Pricing />
       </LazyShow>
+
       <LazyShow>
         <>
           <Canvas />
           <About />
         </>
       </LazyShow>
+
+      {/* ⭐ ADD CONTACT US HERE */}
+      <LazyShow>
+        <>
+          <Canvas />
+          <ContactUs />
+        </>
+      </LazyShow>
+
       <Analytics />
     </div>
   );
