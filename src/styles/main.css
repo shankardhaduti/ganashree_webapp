@@ -23,3 +23,15 @@ a:hover {
 .content ul {
   @apply my-6;
 }
+/* Add this to your Global CSS */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* This targets the main wrapper in your App.js */
+#__next, .bg-background {
+  overflow-x: hidden;
+  width: 100%;
+}

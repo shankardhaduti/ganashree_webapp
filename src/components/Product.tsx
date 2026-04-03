@@ -30,9 +30,7 @@ const Product = () => {
 
   return (
     <section className="relative bg-white" id="product">
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <Wave />
-      </div>
+      
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* ======= NORMAL PRODUCTS (OILS) ======= */}
         <h2 className="text-3xl font-bold text-center mb-6">Our Products</h2>

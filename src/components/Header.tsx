@@ -99,11 +99,7 @@ const Menu = () => {
                 ))}
 
                 {/* CONTACT BUTTON */}
-                <Link href="/contact">
-                  <span className="block px-3 py-2 text-red-600 font-medium cursor-pointer">
-                    Contact Us
-                  </span>
-                </Link>
+                
               </div>
 
               {/* CTA BUTTON */}

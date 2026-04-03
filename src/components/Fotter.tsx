@@ -26,7 +26,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white pt-14 pb-8 mt-20">
+    <footer className="w-full block bg-gray-900 text-white pt-14 pb-8 mt-20">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
 
         {/* Logo + About */}
