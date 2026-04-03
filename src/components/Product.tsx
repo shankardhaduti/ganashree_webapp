@@ -2,10 +2,27 @@ import React, { useState, useRef } from "react";
 import config from "../config/index.json";
 import Wave from "./Wave";
 
+type ProductType = {
+  name: string;
+  description: string;
+  img: string;
+  nutrition?: {
+    calories: number;
+    protein: string;
+    carbs: string;
+    fat: string;
+  };
+  details?: {
+    process?: string;
+    uses?: string[];
+    benefits?: string[];
+  };
+  isByproduct?: boolean;
+};
 const Product = () => {
   const { product } = config;
 
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState<ProductType | null>(null);
   const scrollRef = useRef(null); // Scroll inside popup
 
   const normalProducts = product.items.filter((item) => !item.isByproduct);
@@ -17,7 +34,6 @@ const Product = () => {
         <Wave />
       </div>
       <div className="max-w-6xl mx-auto px-4 py-12">
-
         {/* ======= NORMAL PRODUCTS (OILS) ======= */}
         <h2 className="text-3xl font-bold text-center mb-6">Our Products</h2>
         <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -41,7 +57,9 @@ const Product = () => {
         </div>
 
         {/* ======= WASTE PRODUCTS ======= */}
-        <h2 className="text-3xl font-bold text-center mb-6">Byproducts (Waste)</h2>
+        <h2 className="text-3xl font-bold text-center mb-6">
+          Byproducts (Waste)
+        </h2>
         <p className="text-center text-gray-700 mb-8">
           Our factory waste is naturally reused for farming and animal feeding.
         </p>
@@ -110,17 +128,20 @@ const Product = () => {
                     <div>
                       {selected.details.process && (
                         <p className="mb-2">
-                          <span className="font-semibold">Process:</span> {selected.details.process}
+                          <span className="font-semibold">Process:</span>{" "}
+                          {selected.details.process}
                         </p>
                       )}
                       {selected.details.uses && (
                         <p className="mb-2">
-                          <span className="font-semibold">Uses:</span> {selected.details.uses.join(", ")}
+                          <span className="font-semibold">Uses:</span>{" "}
+                          {selected.details.uses.join(", ")}
                         </p>
                       )}
                       {selected.details.benefits && (
                         <p>
-                          <span className="font-semibold">Benefits:</span> {selected.details.benefits.join(", ")}
+                          <span className="font-semibold">Benefits:</span>{" "}
+                          {selected.details.benefits.join(", ")}
                         </p>
                       )}
                     </div>
@@ -134,14 +155,12 @@ const Product = () => {
                 >
                   ✖
                 </button>
-                
               </div>
             </div>
           </div>
         )}
 
         {/* ======= PAGE SCROLL-TO-TOP BUTTON ======= */}
-        
       </div>
     </section>
   );

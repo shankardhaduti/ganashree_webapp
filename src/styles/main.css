@@ -2,22 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --color-primary: #8B4513 ;
   --color-secondary: #FFD700;
   --color-tertiary: #99a0a3;
 }
 
-a { 
+a {
   @apply text-red-700;
 }
 
 a:hover {
   
 }
-
-
 
 .content p {
   @apply my-6;

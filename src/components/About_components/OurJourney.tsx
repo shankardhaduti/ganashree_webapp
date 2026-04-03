@@ -1,6 +1,6 @@
-import React, { useState, FC } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import ScrollToTop from './ScrollToTop';
+import React, { useState, FC } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import ScrollToTop from "./ScrollToTop";
 interface Milestone {
   year: string;
   title: string;
@@ -11,17 +11,33 @@ const OurJourney: FC = () => {
   const images: string[] = [
     
     "./assets/images/WhatsApp Image 2026-03-31 at 3.49.19 PM.jpeg",
-    "./assets/images/WhatsApp Image 2026-03-30 at 8.27.27 PM.jpeg", 
-    "./assets/images/WhatsApp Image 2026-03-30 at 8.27.23 PM.jpeg", 
+    "./assets/images/WhatsApp Image 2026-03-30 at 8.27.27 PM.jpeg",
+    "./assets/images/WhatsApp Image 2026-03-30 at 8.27.23 PM.jpeg",
     "./assets/images/WhatsApp Image 2026-03-30 at 8.27.25 PM (1).jpeg",
-    "./assets/images/WhatsApp Image 2026-03-30 at 8.27.28 PM.jpeg",  
-    "./assets/images/WhatsApp Image 2026-03-30 at 8.27.26 PM.jpeg"
+    "./assets/images/WhatsApp Image 2026-03-30 at 8.27.28 PM.jpeg",
+    "./assets/images/WhatsApp Image 2026-03-30 at 8.27.26 PM.jpeg",
   ];
   const milestones: Milestone[] = [
-    { year: "50+", title: "50+ years of experience", desc: "It's been over 50 years of our business running successfully." },
-    { year: "Several", title: "Various Oils Extracted", desc: "Extracted from seeds like sunflower, coconut, and more." },
-    { year: "0%", title: "Cholesterol Free", desc: "Extracted oils contain 0% cholesterol for a healthier heart." },
-    { year: "Statewide", title: "Karnataka Delivery", desc: "Providing delivery across the entire state of Karnataka." },
+    {
+      year: "50+",
+      title: "50+ years of experience",
+      desc: "It's been over 50 years of our business running successfully.",
+    },
+    {
+      year: "Several",
+      title: "Various Oils Extracted",
+      desc: "Extracted from seeds like sunflower, coconut, and more.",
+    },
+    {
+      year: "0%",
+      title: "Cholesterol Free",
+      desc: "Extracted oils contain 0% cholesterol for a healthier heart.",
+    },
+    {
+      year: "Statewide",
+      title: "Karnataka Delivery",
+      desc: "Providing delivery across the entire state of Karnataka.",
+    },
   ];
   const nextSlide = (): void => {
     setCurrentSlide((prev) => (prev + 1) % images.length);
@@ -159,38 +175,56 @@ const OurJourney: FC = () => {
       `}</style>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-4" style={{ color: 'var(--color-secondary)' }}>
+          <h2
+            className="text-3xl md:text-5xl font-extrabold mb-4"
+            style={{ color: "var(--color-secondary)" }}
+          >
             Our Journey
           </h2>
           <p className="text-gray-500 text-base md:text-lg max-w-xl mx-auto px-4">
-            From humble beginnings to significant impact, here are the milestones that define our story.
+            From humble beginnings to significant impact, here are the
+            milestones that define our story.
           </p>
         </div>
         {/* Carousel Section */}
         <div className="carousel-container">
           <div className="carousel-viewport">
-            <div 
-              className="carousel-track" 
+            <div
+              className="carousel-track"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {images.map((img, index) => (
                 <div className="carousel-slide" key={index}>
-                  <img src={img} alt={`Journey step ${index + 1}`} loading="lazy" />
+                  <img
+                    src={img}
+                    alt={`Journey step ${index + 1}`}
+                    loading="lazy"
+                  />
                 </div>
               ))}
             </div>
           </div>
-          <button className="nav-btn prev" onClick={prevSlide} aria-label="Previous">
+          <button
+            className="nav-btn prev"
+            onClick={prevSlide}
+            aria-label="Previous"
+          >
             <ChevronLeft size={24} />
           </button>
-          <button className="nav-btn next" onClick={nextSlide} aria-label="Next">
+          <button
+            className="nav-btn next"
+            onClick={nextSlide}
+            aria-label="Next"
+          >
             <ChevronRight size={24} />
           </button>
           <div className="flex justify-center gap-2 mt-6">
             {images.map((_, index) => (
-              <button 
+              <button
                 key={index}
-                className={`h-2 rounded-full transition-all duration-300 border-none cursor-pointer ${currentSlide === index ? 'dot-active' : 'w-2 bg-gray-300'}`}
+                className={`h-2 rounded-full transition-all duration-300 border-none cursor-pointer ${
+                  currentSlide === index ? "dot-active" : "w-2 bg-gray-300"
+                }`}
                 onClick={() => setCurrentSlide(index)}
               />
             ))}
@@ -200,9 +234,7 @@ const OurJourney: FC = () => {
         <div className="milestone-grid">
           {milestones.map((item, index) => (
             <div className="milestone-card" key={index}>
-              <div className="year-badge">
-                {item.year}
-              </div>
+              <div className="year-badge">{item.year}</div>
               <div className="content">
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
