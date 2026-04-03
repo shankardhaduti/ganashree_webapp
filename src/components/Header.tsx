@@ -63,23 +63,14 @@ const Menu = () => {
                   duration={800}
                   offset={-70}
                   activeClass="active"
-                  className="font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
+                  className="font-medium text-tertiary hover:text-[#8B4513] cursor-pointer transition-colors"
                 >
                   {item.name}
                 </Link>
               ))}
 
               {/* CONTACT */}
-              <Link
-                to="contact"
-                spy={true}
-                smooth={true}
-                duration={800}
-                offset={-70}
-                className="font-medium text-red-600 hover:text-red-800 cursor-pointer"
-              >
-                Contact Us
-              </Link>
+              
             </div>
           </nav>
         </div>
@@ -115,7 +106,7 @@ const Menu = () => {
                     duration={800}
                     offset={-70}
                     activeClass="active"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer"
+                    className="block px-3 py-2 rounded-md text-tertiray font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 cursor-pointer"
                   >
                     {item.name}
                   </Link>

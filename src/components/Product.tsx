@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import config from "../config/index.json";
+import Wave from "./Wave";
 
 type ProductType = {
   name: string;
@@ -29,6 +30,9 @@ const Product = () => {
 
   return (
     <section className="relative bg-white" id="product">
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <Wave />
+      </div>
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* ======= NORMAL PRODUCTS (OILS) ======= */}
         <h2 className="text-3xl font-bold text-center mb-6">Our Products</h2>
@@ -59,7 +63,7 @@ const Product = () => {
         <p className="text-center text-gray-700 mb-8">
           Our factory waste is naturally reused for farming and animal feeding.
         </p>
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
           {wasteProducts.map((item, index) => (
             <div
               key={index}

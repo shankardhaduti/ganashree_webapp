@@ -3,28 +3,31 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import PeopleIcon from "@mui/icons-material/People";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
+
 const stats = [
   {
     icon: PeopleIcon,
     value: "50+",
     label: "Experience",
     desc: "Over 50 years of experience",
-    gradient: "linear-gradient(135deg, #b91c1c, #C23945)",
+    gradient: "#FFD700 ",
   },
   {
     icon: LocalShippingIcon,
     value: "Across State",
     label: "Delivery",
     desc: "Providing delivery across Karnataka",
-    gradient: "linear-gradient(135deg, #7a1f26, #C23945)",
+    gradient: "#FFD700",
   },
   {
     icon: FavoriteIcon,
     value: "0% Cholesterol",
     label: "Healthcare",
     desc: "Includes cholesterol free for a healthier body",
-    gradient: "linear-gradient(135deg, #b91c1c, #7a1f26)",
-  },
+
+    gradient: "#FFD700",
+  }
+
 ];
 
 const ImpactPage = () => {
@@ -33,7 +36,7 @@ const ImpactPage = () => {
       <h2 className="text-3xl font-bold text-center mb-6">About Us</h2>
 
       {/* 1. HERO SECTION: Handles extreme narrow (320px) and wide desktop */}
-      <section className="relative min-h-[80vh] md:min-h-[75vh] flex items-center justify-center text-center px-4 md:px-6 py-16 bg-gradient-to-br from-red-700 to-red-500">
+      <section className="relative min-h-[80vh] md:min-h-[75vh] flex items-center justify-center text-center px-4 md:px-6 py-16 bg-primary">
         <div className="max-w-4xl w-full text-white">
           {/* Badge: Font scales down on mobile */}
           <span className="uppercase tracking-[2px] md:tracking-[3px] text-[10px] sm:text-xs md:text-sm font-semibold bg-white/20 px-3 py-1.5 rounded-full backdrop-blur inline-block mb-6">
@@ -96,7 +99,7 @@ const ImpactPage = () => {
                     <Icon sx={{ fontSize: { xs: 30, md: 40 } }} />
                   </div>
 
-                  <div className="text-3xl md:text-4xl font-black mb-2 text-red-700">
+                  <div className="text-3xl md:text-4xl font-black mb-2 text-primary">
                     {s.value}
                   </div>
 
@@ -119,7 +122,7 @@ const ImpactPage = () => {
         <section className="pt-16 md:pt-24 pb-0 px-4 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white overflow-hidden rounded-3xl shadow-xl border border-gray-100">
-            <div className="bg-red-700 py-6 md:py-8 px-6">
+            <div className="bg-primary py-6 md:py-8 px-6">
               <h2 className="text-2xl md:text-4xl font-bold text-white text-center">
                 Quality Assurance & Compliance
               </h2>
@@ -137,8 +140,8 @@ const ImpactPage = () => {
                 </p>
 
                 {/* Registration Number: break-all ensures no overflow on 320px screens */}
-                <div className="py-6 px-4 bg-red-50 rounded-2xl border border-red-100 inline-block w-full">
-                  <span className="text-red-700 font-bold block uppercase tracking-wider text-xs md:text-sm mb-2">
+                <div className="py-6 px-4 bg-yellow-50 rounded-2xl border border-red-100 inline-block w-full">
+                  <span className="text-primary font-bold block uppercase tracking-wider text-xs md:text-sm mb-2">
                     FSSAI Registration Number
                   </span>
                   <span className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 tracking-tight sm:tracking-widest break-all">

@@ -19,9 +19,9 @@ const Footer = () => {
     email: "contact@ganshrioil.org.in",
     address: "Banhatti, Karnataka, India",
     socialMedia: {
-      whatsapp: WhatsAppIcon,
-      instagram: InstagramIcon,
-      twitter: TwitterIcon,
+      whatsapp: "https://web.whatsapp.com/",
+      instagram: "https://www.instagram.com/",
+      twitter: "https://twitter.com",
     },
   };
 
@@ -46,7 +46,7 @@ const Footer = () => {
                   spy={true}
                   smooth={true}
                   offset={-70}
-                  className="text-gray-300 hover:text-white transition cursor-pointer"
+                  className="text-gray-300 hover:text-[#FFD700] transition cursor-pointer"
                 >
                   {item.name}
                 </Link>
@@ -60,14 +60,14 @@ const Footer = () => {
           <h4 className="text-lg font-semibold mb-4">Contact</h4>
 
           {/* Phone 1 */}
-          <a href={`tel:${footer.phone2}`} className="flex items-center py-1 gap-2 text-gray-300 hover:text-white transition">
+          <a href={`tel:${footer.phone2}`} className="flex items-center py-1 gap-2 text-gray-300 hover:text-[#FFD700] transition">
   <PhoneIcon sx={{ fontSize: 20 }} /><span>{footer.phone1}</span>
   
 </a>
 
           {/* Phone 2 */}
            
-<a href={`tel:${footer.phone2}`} className="flex items-center  py-1 gap-2 text-gray-300 hover:text-white transition">
+<a href={`tel:${footer.phone2}`} className="flex items-center  py-1 gap-2 text-gray-300 hover:text-[#FFD700] transition">
   <PhoneIcon sx={{ fontSize: 20 }} /><span>{footer.phone2}</span>
   
 </a>
@@ -75,13 +75,13 @@ const Footer = () => {
           
 
           {/* Email */}
-          <a href={`tel:${footer.email}`} className="flex items-center  py-1 gap-2 text-gray-300 hover:text-white transition">
+          <a href={`tel:${footer.email}`} className="flex items-center  py-1 gap-2 text-gray-300 hover:text-[#FFD700] transition">
   <MessageIcon sx={{ fontSize: 20 }} /><span>{footer.email}</span>
   
 </a>
 
           {/* Location */}
-              <a href={`tel:${footer.address}`} className="flex items-center py-1 gap-2 text-gray-300 hover:text-white transition">
+              <a href={`tel:${footer.address}`} className="flex items-center py-1 gap-2 text-gray-300 hover:text-[#FFD700] transition">
   <LocationOnIcon sx={{ fontSize: 20 }} /><span>{footer.address}</span>
   
 </a>
@@ -91,36 +91,18 @@ const Footer = () => {
         <div>
           <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
           <div className="flex gap-4">
-            <Link
-                  to={footer.socialMedia.whatsapp}
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  className="text-gray-300 hover:text-white transition cursor-pointer"
-                >
-                  <WhatsAppIcon/>
-                </Link>
+            <a href={footer.socialMedia.whatsapp} className="flex items-center py-1 gap-2 text-gray-300 hover:text-[#FFD700] transition">
+               <WhatsAppIcon/>
+            </a>
+           
           
+ <a href={footer.socialMedia.twitter} className="flex items-center py-1 gap-2 text-gray-300 hover:text-[#FFD700] transition">
+               <TwitterIcon/>
+            </a>
 
-                <Link
-                  to={footer.socialMedia.twitter}
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  className="text-gray-300 hover:text-white transition cursor-pointer"
-                >
-                  <TwitterIcon/>
-                </Link>
-
-                 <Link
-                  to={footer.socialMedia.instagram}
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  className="text-gray-300 hover:text-white transition cursor-pointer"
-                >
-                  <InstagramIcon/>
-                </Link>
+                  <a href={footer.socialMedia.instagram} className="flex items-center py-1 gap-2 text-gray-300 hover:text-[#FFD700] transition">
+               <InstagramIcon/>
+            </a>
           </div>
         </div>
       </div>

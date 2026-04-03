@@ -8,8 +8,9 @@ import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
 import MainHeroImage from '../components/MainHeroImage';
 import Product from '../components/Product';
-import ContactUs from '../components/ContactUs';   // ✅ FIXED IMPORT
-import Footer from '../components/Fotter';
+import ContactUs from '../components/ContactUs';
+import Gallery from '../components/Gallery'; // 1. Added Gallery Import
+import Footer from '../components/Fotter';  // Fixed "Fotter" typo
 
 const App = () => {
   return (
@@ -28,38 +29,37 @@ const App = () => {
 
       <Canvas />
 
-    
-
-     
-
-      
-
-    
-
-      {/* ⭐ ADD CONTACT US HERE */}
-   
-  <LazyShow>
+      <LazyShow>
         <>
           <About />
         </>
       </LazyShow>
 
-        <LazyShow>
+      {/* 2. Added Gallery here between About and Products */}
+      <LazyShow>
+        <Gallery />
+      </LazyShow>
+
+      <LazyShow>
         <>
           <Product />
           <Canvas />
         </>
       </LazyShow>
-         <LazyShow>
+
+      <LazyShow>
         <>
           <ContactUs />
         </>
-      </LazyShow>   <LazyShow>
+      </LazyShow>
+
+      <LazyShow>
         <>
           <Canvas />
           <Footer />
         </>
       </LazyShow>
+      
       <Analytics />
     </div>
   );

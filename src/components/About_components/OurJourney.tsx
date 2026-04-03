@@ -49,8 +49,8 @@ const OurJourney: FC = () => {
     <section className="journey-section">
       <style>{`
         :root {
-          --color-primary: #b91c1c;
-          --color-secondary: #7a1f26;
+          --color-primary: #FFD700 ;
+          --color-secondary: #8B4513 ;
         }
         .journey-section {
   padding: 0 00px 100px 40px; /* Top padding is now 0 */
