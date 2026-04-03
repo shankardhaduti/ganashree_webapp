@@ -28,24 +28,10 @@ const App = () => {
         <MainHeroImage />
       </div>
 
-      <Canvas />
+      
 
       {/* MAIN CONTENT SECTIONS */}
-      <LazyShow>
-        <About />
-      </LazyShow>
-
-      <LazyShow>
-        <Gallery />
-      </LazyShow>
-
-      <LazyShow>
-        <Product />
-      </LazyShow>
-
-      <LazyShow>
-        <ContactUs />
-      </LazyShow>
+     
 
       {/* FOOTER SECTION - Outside of any restricted width containers */}
       <div className="relative w-full">
@@ -53,7 +39,7 @@ const App = () => {
         <Footer />
       </div>
 
-      <Analytics />
+    
     </div>
   );
 };

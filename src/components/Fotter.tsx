@@ -1,7 +1,8 @@
 // @ts-nocheck
 import React from "react";
 import config from "../config/index.json";
-import { Link } from "react-scroll";
+
+import Link from "next/link";
 import TwitterIcon from '@mui/icons-material/Twitter';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -39,18 +40,14 @@ const Footer = () => {
         <div>
           <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2">
-            {navigation.map((item) => (
-              <li key={item.name}>
-                <Link
-                  to={item.href}
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  className="text-gray-300 hover:text-[#FFD700] transition cursor-pointer"
-                >
-                  {item.name}
-                </Link>
-              </li>
+            {navigation.map((item,index) => (
+              <li key={index}>
+      <Link href={item.href}>
+        <span className="text-gray-300 hover:text-[#FFD700] cursor-pointer">
+          {item.name}
+        </span>
+      </Link>
+    </li>
             ))}
           </ul>
         </div>
