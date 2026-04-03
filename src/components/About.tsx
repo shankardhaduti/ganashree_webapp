@@ -6,14 +6,10 @@ import ImpactPage from "./About_components/ImpactPage";
 
 function About() {
   return (
-    <section id="about">
-            
+    <section>
       <ImpactPage />
-            
       <OurJourney />
-            
       <CommitmentCards />
-          
     </section>
   );
 }

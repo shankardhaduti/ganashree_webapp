@@ -29,29 +29,10 @@ const App = () => {
 
       <Canvas />
 
-      <LazyShow>
-        <>
-          <About />
-        </>
-      </LazyShow>
 
-      {/* 2. Added Gallery here between About and Products */}
-      <LazyShow>
-        <Gallery />
-      </LazyShow>
+     
 
-      <LazyShow>
-        <>
-          <Product />
-          <Canvas />
-        </>
-      </LazyShow>
-
-      <LazyShow>
-        <>
-          <ContactUs />
-        </>
-      </LazyShow>
+    
 
       <LazyShow>
         <>

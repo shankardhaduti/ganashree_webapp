@@ -3,15 +3,14 @@
     "name": "React landing page 2021",
     "logo": "/assets/images/logo.png"
   },
-  "navigation": [
-    
-    { "name": "Home", "href": "mainhero" },
-    { "name": "About", "href": "about" },
-    { "name": "Product", "href": "product" },
-    { "name": "Contact Us", "href": "contact" },
-    { "name": "Gallery", "href": "gallery"} 
-    
-  ],
+ "navigation": [
+  { "name": "Home", "href": "/" },
+  { "name": "About", "href": "/about" },
+  { "name": "Product", "href": "/products" },
+  { "name": "Gallery", "href": "/gallery" },
+    { "name": "Contact Us", "href": "/contact" }
+
+],
   "callToAction": {
     "text": "Get started",
     "href": "#"
