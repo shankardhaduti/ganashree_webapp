@@ -1,5 +1,4 @@
-import React from "react";
-import config from "../config/index.json";
+import config from '../config/index.json';
 
 const MainHeroImage = () => {
   const { mainHero } = config;

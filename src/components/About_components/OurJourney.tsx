@@ -1,4 +1,4 @@
-import React, { useState, FC } from "react";
+import  { useState, FC } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ScrollToTop from "./ScrollToTop";
 interface Milestone {

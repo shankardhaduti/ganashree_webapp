@@ -1,4 +1,3 @@
-import React from "react";
 const CommitmentCards = () => {
   return (
     <section className="commitment-section">
