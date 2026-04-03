@@ -17,7 +17,11 @@ export default function GalleryPage() {
       <LazyShow>
         <Gallery />
       </LazyShow>
-      <Footer />
+      <div className="relative w-full">
+    
+        <Footer />
+      </div>
+     
     </>
   );
 }
