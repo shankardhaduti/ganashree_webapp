@@ -30,7 +30,7 @@ const ScrollToTop = () => {
     <div className="fixed bottom-8 right-8 z-50">
       <style>{`
         .scroll-to-top-btn {
-          background-color: #b91c1c; /* Matches your Red-700 theme */
+          background-color: #FFD700 ; 
           color: white;
           width: 50px;
           height: 50px;

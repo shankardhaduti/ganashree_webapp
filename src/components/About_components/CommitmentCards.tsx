@@ -32,14 +32,14 @@ const CommitmentCards = () => {
           transition: transform 0.3s ease;
         }
         .card-primary {
-          background: linear-gradient(135deg, #b91c1c 0%, #ef4444 100%);
+          background: #FFD700 ;
         }
         .card-secondary {
-          background: linear-gradient(135deg, #b91c1c 0%, #ef4444 100%);
+          background: #FFD700;
         }
         .card h3 {
           font-size: 1.5rem; /* Smaller font for 320px screens */
-          font-weight: 800;
+          font-weight: 1000;
           margin-bottom: 12px;
           line-height: 1.2;
         }
