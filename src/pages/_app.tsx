@@ -1,9 +1,16 @@
-import { AppProps } from "next/app";
+// import Menu from '../components/Menu';
+import About from '../components/About';
+import Product from '../components/Product';
 
 import "../styles/main.css";
 
-const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Component {...pageProps} />
-);
-
-export default MyApp;
+function App() {
+  return (
+    <>
+      {/* <Menu /> */}
+      <About />
+      <Product />
+    </>
+  )
+}
+export default App;
