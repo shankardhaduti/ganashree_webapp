@@ -1,6 +1,6 @@
 {
   "company": {
-    "name": "React landing page 2021",
+    "name": "Ganashri Oil Merchants",
     "logo": "/assets/images/logo.png"
   },
  "navigation": [
@@ -16,9 +16,9 @@
     "href": "#"
   },
   "mainHero": {
-    "title": "Ganshri Oil Merchants",
+    "title": "Ganashri Oil Merchants",
     "subtitle": "Authentic Wood-Pressed Oils for a Healthier, Natural Lifestyle.",
-    "description": "At Ganshri Oil Merchants, we bring you pure and traditionally wood-pressed edible oils. Our Ghana-made oils retain their natural nutrients and authentic flavour. We produce high-quality Groundnut, Safflower, Coconut, Sunflower, Sesame, Flaxseed, Mustard, and Castor Oils, along with Groundnut Cake for cattle feed. With purity, freshness, and trust at the core, Ganshri ensures healthy and chemical-free oils for your family.",
+    "description": "At Ganashri Oil Merchants, we bring you pure and traditionally wood-pressed edible oils. Our Ganashri-made oils retain their natural nutrients and authentic flavour. We produce high-quality Groundnut, Safflower, Coconut, Sunflower, Sesame, Flaxseed, Mustard, and Castor Oils, along with Groundnut Cake for cattle feed. With purity, freshness, and trust at the core, Ganashri ensures healthy and chemical-free oils for your family.",
     "img": "/assets/images/happyTeam.jpeg",
     "primaryAction": {
       "text": "Get started",

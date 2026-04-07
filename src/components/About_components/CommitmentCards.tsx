@@ -86,14 +86,14 @@ const CommitmentCards = () => {
             <h3>Our Heritage and Mission</h3>
             <div className="content">
               <p>
-                Ganha Shree BK Muragod is a dedicated food business operator
+                Ganashri Basavaraj K Muragod is a dedicated food business operator
                 committed to delivering quality products to our community. Under
-                the leadership of Basavaraj Muragod, our firm operates from
-                Mangalwar Pete, Banhatti[cite: 10].
+                the leadership of Basavaraj K Muragod, our firm operates from
+                Mangalwar Pete, Banhatti.
               </p>
               <p className="sub-text">
                 Our mission is to bridge the gap between traditional food
-                processing and modern safety standards[cite: 15].
+                processing and modern safety standards.
               </p>
             </div>
           </div>
@@ -103,12 +103,12 @@ const CommitmentCards = () => {
             <div className="content">
               <p>
                 We specialize in the essential sector of Vegetable Oil
-                processing and units[cite: 13]. As a licensed Retailer, we take
+                processing and units. As a licensed Retailer, we take
                 pride in managing the supply chain effectively to provide
                 high-quality oils.
               </p>
               <p className="sub-text">
-                Operating under Registration Number: 21225005001169[cite: 4].
+                Operating under Registration Number: 21225005001169.
               </p>
             </div>
           </div>
