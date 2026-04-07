@@ -1,6 +1,6 @@
 {
   "company": {
-    "name": "React landing page 2021",
+    "name": "Ganashri Oil Merchants",
     "logo": "/assets/images/logo.png"
   },
  "navigation": [
@@ -16,9 +16,9 @@
     "href": "#"
   },
   "mainHero": {
-    "title": "Ganshri Oil Merchants",
+    "title": "Ganashri Oil Merchants",
     "subtitle": "Authentic Wood-Pressed Oils for a Healthier, Natural Lifestyle.",
-    "description": "At Ganshri Oil Merchants, we bring you pure and traditionally wood-pressed edible oils. Our Ghana-made oils retain their natural nutrients and authentic flavour. We produce high-quality Groundnut, Safflower, Coconut, Sunflower, Sesame, Flaxseed, Mustard, and Castor Oils, along with Groundnut Cake for cattle feed. With purity, freshness, and trust at the core, Ganshri ensures healthy and chemical-free oils for your family.",
+    "description": "At Ganashri Oil Merchants, we bring you pure and traditionally wood-pressed edible oils. Our Ganashri-made oils retain their natural nutrients and authentic flavour. We produce high-quality Groundnut, Safflower, Coconut, Sunflower, Sesame, Flaxseed, Mustard, and Castor Oils, along with Groundnut Cake for cattle feed. With purity, freshness, and trust at the core, Ganashri ensures healthy and chemical-free oils for your family.",
     "img": "/assets/images/happyTeam.jpeg",
     "primaryAction": {
       "text": "Get started",
@@ -37,6 +37,8 @@
         "name": "Sunflower Oil",
         "description": "Pure sunflower oil made in our factory",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1WNFkw_7q6i76_II-lyiqTKOk0Q7AH_w26g&s",
+        "code": "SUNFLOWER_OIL",
+        "price": 120,
         "nutrition": {
           "calories": 52,
           "protein": "0.3g",
@@ -53,6 +55,8 @@
         "name": "Groundnut Oil",
         "description": "Traditional groundnut oil",
         "img": "https://olivewellnessinstitute.org/wp-content/uploads/2024/02/shutterstock_150359531-scaled.jpg",
+          "code": "GROUNDNUT_OIL",
+          "price": 150,
         "nutrition": {
           "calories": 56,
           "protein": "0.4g",
@@ -69,6 +73,8 @@
         "name": "Coconut Oil",
         "description": "Cold pressed coconut oil",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7VjrGpCxFEBrNTr80Pxy6SXpPLgwBbwJDvQ&s",
+        "code": "COCONUT_OIL",
+        "price": 200,
         "nutrition": {
           "calories": 90,
           "protein": "0g",
@@ -85,6 +91,8 @@
         "name": "Sesame Oil",
         "description": "Aromatic sesame oil",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7VjrGpCxFEBrNTr80Pxy6SXpPLgwBbwJDvQ&s",
+          "code": "SESAME_OIL",
+            "price": 180,
         "nutrition": {
           "calories": 120,
           "protein": "0g",
@@ -101,6 +109,8 @@
         "name": "Olive Oil",
         "description": "Extra virgin olive oil",
         "img": "https://img.freepik.com/free-photo/soybean-oil-soybean-food-beverage-products-food-nutrition-concept_1150-26351.jpg?semt=ais_incoming&w=740&q=80",
+          "code": "OLIVE_OIL",
+            "price": 250,
         "nutrition": {
           "calories": 119,
           "protein": "0g",
@@ -117,6 +127,8 @@
         "name": "Mustard Oil",
         "description": "Traditional mustard oil",
         "img": "https://images.squarespace-cdn.com/content/v1/5f04b0aa458da11138252c08/979d2d6a-3417-4805-968c-d5bf081fd85f/industrial-seed-oils-processed-foods-kitchen.jpg",
+          "code": "MUSTARD_OIL",
+            "price": 130,
         "nutrition": {
           "calories": 124,
           "protein": "0g",
@@ -133,6 +145,8 @@
         "name": "Rice Bran Oil",
         "description": "Healthy rice bran oil",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ffr2_o4zfqijGjctyWo-Sz5rln9_Axf-rA&s",
+          "code": "RICE_BRAN_OIL",
+            "price": 110,
         "nutrition": {
           "calories": 120,
           "protein": "0g",
@@ -149,6 +163,8 @@
         "name": "Palm Oil",
         "description": "Pure palm oil",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ffr2_o4zfqijGjctyWo-Sz5rln9_Axf-rA&s",
+          "code": "PALM_OIL",
+            "price": 90,
         "nutrition": {
           "calories": 120,
           "protein": "0g",
@@ -165,6 +181,8 @@
         "name": "Avocado Oil",
         "description": "Cold pressed avocado oil",
         "img": "https://images.squarespace-cdn.com/content/v1/5f04b0aa458da11138252c08/979d2d6a-3417-4805-968c-d5bf081fd85f/industrial-seed-oils-processed-foods-kitchen.jpg",
+          "code": "AVOCADO_OIL",
+            "price": 220,
         "nutrition": {
           "calories": 160,
           "protein": "0g",
@@ -181,6 +199,8 @@
         "name": "Flaxseed Oil",
         "description": "Organic flaxseed oil",
         "img": "https://images.squarespace-cdn.com/content/v1/5f04b0aa458da11138252c08/979d2d6a-3417-4805-968c-d5bf081fd85f/industrial-seed-oils-processed-foods-kitchen.jpg",
+          "code": "FLAXSEED_OIL",
+            "price": 180,
         "nutrition": {
           "calories": 120,
           "protein": "0g",

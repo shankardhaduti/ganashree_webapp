@@ -14,10 +14,10 @@ const Footer = () => {
 
   const footer = {
     description:
-      "We are Ganshri Oil Merchants, committed to delivering pure and premium quality edible oils.",
+      "We are Ganashri Oil Merchants, committed to delivering pure and premium quality edible oils.",
     phone1: "+918087678977",
     phone2: "+918459485202",
-    email: "contact@ganshrioil.org.in",
+    email: "contact@ganashrioil.org.in",
     address: "Banhatti, Karnataka, India",
     socialMedia: {
       whatsapp: "https://web.whatsapp.com/",
@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
 
         {/* Navigation */}
-        <div>
+          <div>
           <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2">
             {navigation.map((item,index) => (

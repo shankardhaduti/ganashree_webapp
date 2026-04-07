@@ -225,7 +225,7 @@ const ContactUs = () => {
                   )
                 }
               >
-                contact@ganshrioil.org.in
+                contact@ganashrioil.org.in
               </p>
               <p className="text-gray-600">Send us an email anytime</p>
             </div>

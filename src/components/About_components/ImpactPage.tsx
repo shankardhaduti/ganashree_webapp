@@ -1,4 +1,3 @@
-import React from "react";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import PeopleIcon from "@mui/icons-material/People";
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -46,7 +45,7 @@ const ImpactPage = () => {
 
           {/* Heading: Fluid scaling from 30px to 60px */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-[1.1] md:leading-tight">
-            Ganha Shree BK Muragod:
+            Ganashri Basavaraj K Muragod
             <br className="hidden sm:block" />
             <span className="text-white/90"> Quality You Can Trust</span>
           </h1>
@@ -134,7 +133,7 @@ const ImpactPage = () => {
                 <p>
                   At{" "}
                   <strong className="text-gray-900">
-                    Ganha Shree BK Muragod
+                    Ganashri Basavaraj K Muragod
                   </strong>
                   , your health and safety are our highest priorities. We
                   operate in strict accordance with the FSSAI.
