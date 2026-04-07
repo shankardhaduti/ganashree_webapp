@@ -1,5 +1,6 @@
 import Menu from '../components/Menu';
 import About from '../components/About';
+import Product from '../components/Product';
 
 import '../styles/main.css';
 
@@ -8,6 +9,7 @@ function App(){
     <>
     <Menu/>
     <About/>
+    <Product/>
     </>
     
   )

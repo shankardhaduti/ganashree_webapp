@@ -5,10 +5,9 @@ const Product = () => {
   const { product } = config;
 
   const [selected, setSelected] = useState(null);
-  const scrollRef = useRef(null); // Scroll inside popup
+  const scrollRef = useRef(null);
 
   const normalProducts = product.items.filter((item) => !item.isByproduct);
-  const wasteProducts = product.items.filter((item) => item.isByproduct);
 
   return (
     <section className="relative bg-white" id="product">
@@ -16,62 +15,50 @@ const Product = () => {
 
         {/* ======= NORMAL PRODUCTS (OILS) ======= */}
         <h2 className="text-3xl font-bold text-center mb-6">Our Oils</h2>
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+
+        <div className="grid md:grid-cols-3 gap-8">
           {normalProducts.map((item, index) => (
             <div
               key={index}
               onClick={() => setSelected(item)}
-              className="relative cursor-pointer overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+              className="cursor-pointer group"
             >
-              <img
-                src={item.img}
-                alt={item.name}
-                className="h-64 w-full object-cover"
-              />
-              <div className="absolute bottom-0 w-full bg-black bg-opacity-60 text-white p-4">
-                <p className="font-semibold text-lg">{item.name}</p>
-                <p className="text-sm mt-1">{item.description}</p>
+              <div className="relative overflow-hidden rounded-xl">
+
+                {/* IMAGE */}
+                <img
+                  src={item.img}
+                  alt={item.name}
+                  className="h-64 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                />
+
+                {/* OVERLAY */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-4">
+                  <p className="text-white text-lg font-semibold">
+                    {item.name}
+                  </p>
+                  <p className="text-gray-200 text-sm">
+                    {item.description}
+                  </p>
+                </div>
+
               </div>
             </div>
           ))}
         </div>
 
-        {/* ======= WASTE PRODUCTS ======= */}
-        <h2 className="text-3xl font-bold text-center mb-6">Byproducts (Waste)</h2>
-        <p className="text-center text-gray-700 mb-8">
-          Our factory waste is naturally reused for farming and animal feeding.
-        </p>
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {wasteProducts.map((item, index) => (
-            <div
-              key={index}
-              onClick={() => setSelected(item)}
-              className="relative cursor-pointer overflow-hidden rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
-            >
-              <img
-                src={item.img}
-                alt={item.name}
-                className="h-64 w-full object-cover"
-              />
-              <div className="absolute bottom-0 w-full bg-green-800 bg-opacity-70 text-white p-4">
-                <p className="font-semibold text-lg">{item.name}</p>
-                <p className="text-sm mt-1">{item.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* ======= PROFESSIONAL POPUP ======= */}
+        {/* ======= POPUP ======= */}
         {selected && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center z-50 p-4"
+           className="fixed inset-0 bg-black bg-opacity-90 z-50 overflow-y-auto"
             onClick={() => setSelected(null)}
           >
             <div
-              className="flex flex-col md:flex-row bg-transparent w-full max-w-6xl h-auto md:h-[70vh] relative overflow-hidden"
+             className="flex flex-col md:flex-row bg-transparent w-full max-w-6xl min-h-screen md:h-[70vh] relative"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* IMAGE LEFT */}
+
+              {/* LEFT IMAGE */}
               <div className="md:w-1/2 flex justify-center items-center">
                 <img
                   src={selected.img}
@@ -80,28 +67,43 @@ const Product = () => {
                 />
               </div>
 
-              {/* INFO RIGHT */}
-              <div className="md:w-1/2 relative">
-                {/* Scrollable content */}
+              {/* RIGHT CONTENT */}
+              <div className="md:w-1/2 w-full">
+
                 <div
                   ref={scrollRef}
-                  className="text-white p-6 h-[70vh] overflow-y-auto pr-12"
+              className="text-white p-6 max-h-[60vh] md:max-h-[70vh] overflow-y-auto"
                 >
                   <h2 className="text-3xl font-bold mb-3">{selected.name}</h2>
                   <p className="mb-4">{selected.description}</p>
 
-                  {selected.nutrition && (
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-lg mb-2">Nutrition</h4>
-                      <ul className="list-disc list-inside">
-                        <li>Calories: {selected.nutrition.calories}</li>
-                        <li>Protein: {selected.nutrition.protein}</li>
-                        <li>Carbs: {selected.nutrition.carbs}</li>
-                        <li>Fat: {selected.nutrition.fat}</li>
-                      </ul>
+                  {/* ✅ QR CODE (ADDED HERE) */}
+                  {selected.qr && (
+                    <div className="flex justify-center mb-6">
+                      <img
+                        src={selected.qr}
+                        alt="QR Code"
+                        className="w-28 h-28"
+                      />
                     </div>
                   )}
 
+                  {/* NUTRITION */}
+                 {/* TEST REPORT */}
+{selected.nutrition?.testReport && (
+  <div className="mb-4">
+    <h4 className="font-semibold text-lg mb-2">Test Report</h4>
+    <ul className="list-disc list-inside text-sm">
+      {Object.entries(selected.nutrition.testReport).map(([key, value], i) => (
+        <li key={i}>
+          {key}: {value}
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
+                  {/* DETAILS */}
                   {selected.details && (
                     <div>
                       {selected.details.process && (
@@ -123,33 +125,19 @@ const Product = () => {
                   )}
                 </div>
 
-                {/* Buttons */}
+                {/* CLOSE BUTTON */}
                 <button
                   onClick={() => setSelected(null)}
                   className="absolute top-4 right-4 text-white text-3xl font-bold"
                 >
                   ✖
                 </button>
-                <button
-                  onClick={() => scrollRef.current.scrollTo({ top: 0, behavior: "smooth" })}
-                  className="absolute right-4 bottom-4 bg-white text-black rounded-full p-2 shadow-lg hover:bg-gray-200 transition"
-                  title="Scroll to Top"
-                >
-                  ↑
-                </button>
+
               </div>
             </div>
           </div>
         )}
 
-        {/* ======= PAGE SCROLL-TO-TOP BUTTON ======= */}
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed right-4 bottom-4 bg-black text-white rounded-full p-3 shadow-lg hover:bg-gray-800 transition"
-          title="Scroll to Top of Page"
-        >
-          ↑
-        </button>
       </div>
     </section>
   );
