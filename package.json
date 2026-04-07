@@ -4,7 +4,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
     "export": "next export",
@@ -59,12 +58,7 @@
     "postcss": "^8.3.11",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
-    "tailwindcss": "^2.2.17",
-<<<<<<< HEAD
-    "typescript": "^6.0.2"
-=======
-    "typescript": "^5.9.3"
->>>>>>> 3093ab84801430d7c483c22dd007efa3c0756ded
+    "tailwindcss": "^2.2.17"
   },
   "license": "ISC"
 }
