@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React from "react";
 import config from "../config/index.json";
+
 import Link from "next/link";
 import TwitterIcon from '@mui/icons-material/Twitter';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';

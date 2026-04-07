@@ -23,6 +23,10 @@ const App = () => {
         <MainHeroImage />
       </div>
 
+      
+
+      {/* MAIN CONTENT SECTIONS */}
+     
 
      
       {/* FOOTER SECTION - Outside of any restricted width containers */}
@@ -31,7 +35,7 @@ const App = () => {
         <Footer />
       </div>
 
-      <Analytics />
+    
     </div>
   );
 };
