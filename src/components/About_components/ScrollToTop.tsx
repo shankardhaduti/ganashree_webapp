@@ -1,36 +1,25 @@
-import React, { useEffect, useState, FC } from 'react';
-import {
-  Fab,
-  Zoom,
-  useScrollTrigger,
-  Box,
-  styled
-} from '@mui/material';
-import { ArrowUp } from 'lucide-react';
+import  { useState, useEffect } from 'react';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
-const StyledFab = styled(Fab)(() => ({
-  backgroundColor: 'var(--color-primary)',
-  color: '#fff',
-  '&:hover': {
-    backgroundColor: 'var(--color-secondary)',
-  },
-}));
+const ScrollToTop = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
-const ScrollToTop: FC = () => {
-  const [mounted, setMounted] = useState(false);
+  // Show button when page is scrolled down 300px
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
 
+  // Set the scroll event listener
   useEffect(() => {
-    setMounted(true);
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 100, // 👈 lower for testing
-  });
-
-  if (!mounted) return null;
-
-  const handleClick = () => {
+  const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -38,20 +27,50 @@ const ScrollToTop: FC = () => {
   };
 
   return (
-    <Zoom in={trigger}>
-      <Box
-        sx={{
-          position: 'fixed',
-          bottom: 30,
-          right: 30,
-          zIndex: 2000, // 👈 IMPORTANT (above everything)
-        }}
+    <div className="fixed bottom-8 right-8 z-50">
+      <style>{`
+        .scroll-to-top-btn {
+          background-color: #FFD700 ; 
+          color: white;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          cursor: pointer;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+          transition: all 0.3s ease-in-out;
+          opacity: ${isVisible ? '1' : '0'};
+          visibility: ${isVisible ? 'visible' : 'hidden'};
+          transform: translateY(${isVisible ? '0' : '20px'});
+        }
+
+        .scroll-to-top-btn:hover {
+          background-color: #7a1f26; /* Darker red on hover */
+          transform: scale(1.1);
+        }
+
+        @media (max-width: 640px) {
+          .scroll-to-top-btn {
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+          }
+        }
+      `}</style>
+
+      <button
+        type="button"
+        onClick={scrollToTop}
+        className="scroll-to-top-btn"
+        aria-label="Scroll to top"
       >
-        <StyledFab onClick={handleClick}>
-          <ArrowUp />
-        </StyledFab>
-      </Box>
-    </Zoom>
+        <ArrowUpwardIcon fontSize="medium" />
+      </button>
+    </div>
   );
 };
 

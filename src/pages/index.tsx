@@ -1,52 +1,36 @@
-import React from 'react';
 
-import About from '../components/About';
 import Analytics from '../components/Analytics';
 import Canvas from '../components/Canvas';
-import Features from '../components/Features';
-import Header from '../components/Menu';
-import LazyShow from '../components/LazyShow';
+import Header from '../components/Header';
 import MainHero from '../components/MainHero';
 import MainHeroImage from '../components/MainHeroImage';
-import Pricing from '../components/Pricing';
-import Product from '../components/Product';
+
+import Footer from '../components/Fotter'; // Ensure the filename matches
 
 const App = () => {
   return (
-    <div className={`bg-background grid gap-y-16 overflow-hidden`}>
-      <div className={`relative bg-background`}>
+    /* Change 1: Added overflow-x-hidden here to kill the bottom scrollbar */
+    <div className="bg-background flex flex-col gap-y-16 overflow-x-hidden w-full">
+      
+      {/* HERO SECTION */}
+      <div className="relative bg-background">
         <div className="max-w-7xl mx-auto">
-          <div
-            className={`relative z-10 pb-8 bg-background sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32`}
-          >
+          <div className="relative z-10 pb-8 bg-background sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
             <Header />
             <MainHero />
           </div>
         </div>
         <MainHeroImage />
       </div>
-      <Canvas />
-      <LazyShow>
-        <>
-          <Product />
-          <Canvas />
-        </>
-      </LazyShow>
-      <LazyShow>
-        <>
-          <Features />
-          <Canvas />
-        </>
-      </LazyShow>
-      <LazyShow>
-        <Pricing />
-      </LazyShow>
-      <LazyShow>
-        <>
-          <Canvas />
-          <About />
-        </>
-      </LazyShow>
+
+
+     
+      {/* FOOTER SECTION - Outside of any restricted width containers */}
+      <div className="relative w-full">
+        <Canvas />
+        <Footer />
+      </div>
+
       <Analytics />
     </div>
   );

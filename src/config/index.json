@@ -1,25 +1,51 @@
 {
   "company": {
-    "name": "React landing page 2021",
+    "name": "Ganashri Oil Merchants",
     "logo": "/assets/images/logo.png"
   },
+<<<<<<< HEAD
 
   "navigation": [
     { "name": "Product", "href": "product" }
   ],
 
+=======
+ "navigation": [
+  { "name": "Home", "href": "/" },
+  { "name": "About", "href": "/about" },
+  { "name": "Product", "href": "/products" },
+  { "name": "Gallery", "href": "/gallery" },
+    { "name": "Contact Us", "href": "/contact" }
+
+],
+>>>>>>> 3093ab84801430d7c483c22dd007efa3c0756ded
   "callToAction": {
     "text": "Get started",
     "href": "#"
   },
 
   "mainHero": {
+<<<<<<< HEAD
     "title": "Premium Quality",
     "subtitle": "Edible Oils",
     "description": "Pure, healthy and natural oils directly from our factory",
     "img": "https://images.unsplash.com/photo-1587049352846-4a222e784d38",
     "primaryAction": { "text": "Explore Products", "href": "#" },
     "secondaryAction": { "text": "Contact Us", "href": "mailto:test@gmail.com" }
+=======
+    "title": "Ganashri Oil Merchants",
+    "subtitle": "Authentic Wood-Pressed Oils for a Healthier, Natural Lifestyle.",
+    "description": "At Ganashri Oil Merchants, we bring you pure and traditionally wood-pressed edible oils. Our Ganashri-made oils retain their natural nutrients and authentic flavour. We produce high-quality Groundnut, Safflower, Coconut, Sunflower, Sesame, Flaxseed, Mustard, and Castor Oils, along with Groundnut Cake for cattle feed. With purity, freshness, and trust at the core, Ganashri ensures healthy and chemical-free oils for your family.",
+    "img": "/assets/images/happyTeam.jpeg",
+    "primaryAction": {
+      "text": "Get started",
+      "href": "#"
+    },
+    "secondaryAction": {
+      "text": "Contact us",
+      "href": "mailto:issaafakattan@gmail.com?subject=I like react landing page!"
+    }
+>>>>>>> 3093ab84801430d7c483c22dd007efa3c0756ded
   },
 
   "product": {
@@ -27,6 +53,7 @@
     "items": [
       {
         "name": "Sunflower Oil",
+<<<<<<< HEAD
         "description": "Light and healthy oil ideal for daily cooking and frying.",
        "img": "https://kumarmetal.com/wp-content/uploads/784053690-sunflower-oil-properties-and-manufacture.jpg",
         "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=SunflowerOil",
@@ -49,11 +76,28 @@
           "process": "Cold pressed from premium sunflower seeds",
           "uses": ["Cooking", "Frying", "Salads"],
           "benefits": ["Heart friendly", "Light taste", "Rich in Vitamin E"]
+=======
+        "description": "Pure sunflower oil made in our factory",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1WNFkw_7q6i76_II-lyiqTKOk0Q7AH_w26g&s",
+        "code": "SUNFLOWER_OIL",
+        "price": 120,
+        "nutrition": {
+          "calories": 52,
+          "protein": "0.3g",
+          "carbs": "14g",
+          "fat": "0.2g"
+        },
+        "details": {
+          "process": "Cold pressed",
+          "uses": ["Cooking", "Salads"],
+          "benefits": ["Heart friendly", "Light taste"]
+>>>>>>> 3093ab84801430d7c483c22dd007efa3c0756ded
         }
       },
 
       {
         "name": "Groundnut Oil",
+<<<<<<< HEAD
         "description": "Traditional oil with rich aroma, perfect for deep frying.",
         "img": "/assets/images/G1.jpg",
         "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=GroundnutOil",
@@ -76,11 +120,28 @@
           "process": "Extracted using wooden press method",
           "uses": ["Cooking", "Deep frying"],
           "benefits": ["High antioxidants", "Rich flavor"]
+=======
+        "description": "Traditional groundnut oil",
+        "img": "https://olivewellnessinstitute.org/wp-content/uploads/2024/02/shutterstock_150359531-scaled.jpg",
+          "code": "GROUNDNUT_OIL",
+          "price": 150,
+        "nutrition": {
+          "calories": 56,
+          "protein": "0.4g",
+          "carbs": "13g",
+          "fat": "0.5g"
+        },
+        "details": {
+          "process": "Wooden press",
+          "uses": ["Cooking", "Deep frying"],
+          "benefits": ["Rich flavor", "High antioxidants"]
+>>>>>>> 3093ab84801430d7c483c22dd007efa3c0756ded
         }
       },
 
       {
         "name": "Coconut Oil",
+<<<<<<< HEAD
         "description": "Natural oil from fresh coconuts for cooking and personal care.",
         "img": "https://www.sarvaani.in/cdn/shop/files/SARVAANI_Dry_Coconut_Oil.png?v=1771081677",
         "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=CoconutOil",
@@ -102,6 +163,21 @@
         "details": {
           "process": "Cold pressed from fresh coconuts",
           "uses": ["Cooking", "Hair care"],
+=======
+        "description": "Cold pressed coconut oil",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7VjrGpCxFEBrNTr80Pxy6SXpPLgwBbwJDvQ&s",
+        "code": "COCONUT_OIL",
+        "price": 200,
+        "nutrition": {
+          "calories": 90,
+          "protein": "0g",
+          "carbs": "0g",
+          "fat": "10g"
+        },
+        "details": {
+          "process": "Cold pressed from fresh coconuts",
+          "uses": ["Hair care", "Cooking"],
+>>>>>>> 3093ab84801430d7c483c22dd007efa3c0756ded
           "benefits": ["Boosts immunity", "Healthy skin"]
         }
       },
@@ -160,6 +236,7 @@
 
       {
         "name": "Sesame Oil",
+<<<<<<< HEAD
         "description": "Natural oil from fresh coconuts for cooking and personal care.",
         "img": "https://healthyroots.com/cdn/shop/files/Sesame-oil-cold-pressed.jpg?v=1763794292&width=1920",
         "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=CoconutOil",
@@ -182,6 +259,22 @@
           "process": "Cold pressed from fresh coconuts",
           "uses": ["Cooking", "Hair care"],
           "benefits": ["Boosts immunity", "Healthy skin"]
+=======
+        "description": "Aromatic sesame oil",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7VjrGpCxFEBrNTr80Pxy6SXpPLgwBbwJDvQ&s",
+          "code": "SESAME_OIL",
+            "price": 180,
+        "nutrition": {
+          "calories": 120,
+          "protein": "0g",
+          "carbs": "0g",
+          "fat": "14g"
+        },
+        "details": {
+          "process": "Roasted seeds extraction",
+          "uses": ["Cooking", "Salads"],
+          "benefits": ["Rich aroma", "Boosts metabolism"]
+>>>>>>> 3093ab84801430d7c483c22dd007efa3c0756ded
         }
       },
 
@@ -227,6 +320,7 @@
 
       {
         "name": "Olive Oil",
+<<<<<<< HEAD
         "description": "Organic oil rich in omega-3 fatty acids.",
         "img": "https://www.tatasimplybetter.com/cdn/shop/files/olive_1080x1080_2e1eabf2-2c28-4046-873c-5a9a3ae51a14.jpg?v=1734608321",
         "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=FlaxseedOil",
@@ -236,6 +330,141 @@
           "uses": ["Salads", "Supplements"],
           "benefits": ["Omega-3 source", "Improves digestion"]
         }
+=======
+        "description": "Extra virgin olive oil",
+        "img": "https://img.freepik.com/free-photo/soybean-oil-soybean-food-beverage-products-food-nutrition-concept_1150-26351.jpg?semt=ais_incoming&w=740&q=80",
+          "code": "OLIVE_OIL",
+            "price": 250,
+        "nutrition": {
+          "calories": 119,
+          "protein": "0g",
+          "carbs": "0g",
+          "fat": "13.5g"
+        },
+        "details": {
+          "process": "Cold pressed",
+          "uses": ["Cooking", "Salads"],
+          "benefits": ["Heart health", "Rich in antioxidants"]
+        }
+      },
+      {
+        "name": "Mustard Oil",
+        "description": "Traditional mustard oil",
+        "img": "https://images.squarespace-cdn.com/content/v1/5f04b0aa458da11138252c08/979d2d6a-3417-4805-968c-d5bf081fd85f/industrial-seed-oils-processed-foods-kitchen.jpg",
+          "code": "MUSTARD_OIL",
+            "price": 130,
+        "nutrition": {
+          "calories": 124,
+          "protein": "0g",
+          "carbs": "0g",
+          "fat": "14g"
+        },
+        "details": {
+          "process": "Cold pressed from mustard seeds",
+          "uses": ["Cooking", "Pickles"],
+          "benefits": ["Boosts metabolism", "Rich flavor"]
+        }
+      },
+      {
+        "name": "Rice Bran Oil",
+        "description": "Healthy rice bran oil",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ffr2_o4zfqijGjctyWo-Sz5rln9_Axf-rA&s",
+          "code": "RICE_BRAN_OIL",
+            "price": 110,
+        "nutrition": {
+          "calories": 120,
+          "protein": "0g",
+          "carbs": "0g",
+          "fat": "13g"
+        },
+        "details": {
+          "process": "Refined from rice bran",
+          "uses": ["Cooking", "Deep frying"],
+          "benefits": ["Lowers cholesterol", "Light taste"]
+        }
+      },
+      {
+        "name": "Palm Oil",
+        "description": "Pure palm oil",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ffr2_o4zfqijGjctyWo-Sz5rln9_Axf-rA&s",
+          "code": "PALM_OIL",
+            "price": 90,
+        "nutrition": {
+          "calories": 120,
+          "protein": "0g",
+          "carbs": "0g",
+          "fat": "14g"
+        },
+        "details": {
+          "process": "Refined and filtered",
+          "uses": ["Cooking", "Baking"],
+          "benefits": ["High energy", "Neutral taste"]
+        }
+      },
+      {
+        "name": "Avocado Oil",
+        "description": "Cold pressed avocado oil",
+        "img": "https://images.squarespace-cdn.com/content/v1/5f04b0aa458da11138252c08/979d2d6a-3417-4805-968c-d5bf081fd85f/industrial-seed-oils-processed-foods-kitchen.jpg",
+          "code": "AVOCADO_OIL",
+            "price": 220,
+        "nutrition": {
+          "calories": 160,
+          "protein": "0g",
+          "carbs": "0g",
+          "fat": "18g"
+        },
+        "details": {
+          "process": "Cold pressed",
+          "uses": ["Cooking", "Salads"],
+          "benefits": ["Heart friendly", "Rich in Vitamin E"]
+        }
+      },
+      {
+        "name": "Flaxseed Oil",
+        "description": "Organic flaxseed oil",
+        "img": "https://images.squarespace-cdn.com/content/v1/5f04b0aa458da11138252c08/979d2d6a-3417-4805-968c-d5bf081fd85f/industrial-seed-oils-processed-foods-kitchen.jpg",
+          "code": "FLAXSEED_OIL",
+            "price": 180,
+        "nutrition": {
+          "calories": 120,
+          "protein": "0g",
+          "carbs": "0g",
+          "fat": "14g"
+        },
+        "details": {
+          "process": "Cold pressed",
+          "uses": ["Salads", "Supplements"],
+          "benefits": ["Omega-3 source", "Improves digestion"]
+        }
+      },
+      {
+        "name": "Oil  Waste",
+        "description": "Byproduct used as organic fertilizer and nutritious feed for cows and goats.",
+        "img": "https://5.imimg.com/data5/ECOM/Default/2022/11/SS/LR/BF/71853916/image-f536a433-6c2d-4e73-a8cf-47445a876d99.jpg",
+        "isByproduct": true,
+        "details": {
+          "uses": [
+            "Cow feed",
+            "Goat feed",
+            "Organic fertilizer",
+            "Soil improvement"
+          ]
+        }
+      },
+      {
+        "name": "Oil Cake / Waste",
+        "description": "Byproduct used as organic fertilizer and nutritious feed for cows and goats.",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs3s9illWKXvJEyuHNAnscb7hI1HJ5XHmIsg&s",
+        "isByproduct": true,
+        "details": {
+          "uses": [
+            "Cow feed",
+            "Goat feed",
+            "Organic fertilizer",
+            "Soil improvement"
+          ]
+        }
+>>>>>>> 3093ab84801430d7c483c22dd007efa3c0756ded
       }
     ]
   },
@@ -256,4 +485,8 @@
     "sections": [],
     "socialMedia": {}
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3093ab84801430d7c483c22dd007efa3c0756ded
