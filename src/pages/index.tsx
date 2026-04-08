@@ -1,4 +1,4 @@
-import Analytics from '../components/Analytics';
+
 import Canvas from '../components/Canvas';
 import Header from '../components/Header';
 import MainHero from '../components/MainHero';
@@ -48,6 +48,11 @@ const App = () => {
               A snapshot of the lives we've touched and the journey so far.
             </p>
           </div>
+      
+
+      {/* MAIN CONTENT SECTIONS */}
+     
+
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {stats.map((s, i) => {
@@ -137,7 +142,7 @@ const App = () => {
         </div>
       </div>
 
-      <Analytics />
+    
     </div>
   );
 };
