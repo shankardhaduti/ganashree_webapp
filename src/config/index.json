@@ -38,76 +38,78 @@
     "items": [
       {
         "name": "Sunflower Oil",
-        "description": "Pure sunflower oil made in our factory",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1WNFkw_7q6i76_II-lyiqTKOk0Q7AH_w26g&s",
-        "code": "SUNFLOWER_OIL",
-        "price": 120,
+        "description": "Light and healthy oil ideal for daily cooking and frying.",
+       "img": "https://kumarmetal.com/wp-content/uploads/784053690-sunflower-oil-properties-and-manufacture.jpg",
         "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=SunflowerOil",
         "nutrition": {
-          "calories": 52,
-          "protein": "0.3g",
-          "carbs": "14g",
-          "fat": "0.2g",
-          "testReport": {
-            "Moisture": "0.05%",
-            "FFA": "0.3%",
-            "Iodine Value": "96-112",
-            "Saponification Value": "168-177",
-            "Refractive Index": "1.465-1.470"
-          }
-        },
+  "basic": {
+    "calories": 884,
+    "protein": "0g",
+    "carbs": "0g",
+    "fat": "100g"
+  },
+  "testReport": {
+    "Moisture": "0.05%",
+    "FFA": "0.3%",
+    "Iodine Value": "96-112",
+    "Saponification Value": "168-177",
+    "Refractive Index": "1.465-1.470"
+  }
+},
         "details": {
-          "process": "Cold pressed",
-          "uses": ["Cooking", "Salads"],
-          "benefits": ["Heart friendly", "Light taste"]
+          "process": "Cold pressed from premium sunflower seeds",
+          "uses": ["Cooking", "Frying", "Salads"],
+          "benefits": ["Heart friendly", "Light taste", "Rich in Vitamin E"]
         }
       },
+
       {
         "name": "Groundnut Oil",
-        "description": "Traditional groundnut oil",
-        "img": "https://olivewellnessinstitute.org/wp-content/uploads/2024/02/shutterstock_150359531-scaled.jpg",
-        "code": "GROUNDNUT_OIL",
-        "price": 150,
+        "description": "Traditional oil with rich aroma, perfect for deep frying.",
+        "img": "/assets/images/G1.jpg",
         "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=GroundnutOil",
         "nutrition": {
-          "calories": 56,
-          "protein": "0.4g",
-          "carbs": "13g",
-          "fat": "0.5g",
-          "testReport": {
-            "Moisture": "0.05%",
-            "FFA": "0.3%",
-            "Iodine Value": "96-112",
-            "Saponification Value": "168-177",
-            "Refractive Index": "1.465-1.470"
-          }
-        },
+  "basic": {
+    "calories": 884,
+    "protein": "0g",
+    "carbs": "0g",
+    "fat": "100g"
+  },
+  "testReport": {
+    "Moisture": "0.05%",
+    "FFA": "0.3%",
+    "Iodine Value": "96-112",
+    "Saponification Value": "168-177",
+    "Refractive Index": "1.465-1.470"
+  }
+},
         "details": {
-          "process": "Wooden press",
+          "process": "Extracted using wooden press method",
           "uses": ["Cooking", "Deep frying"],
-          "benefits": ["Rich flavor", "High antioxidants"]
+          "benefits": ["High antioxidants", "Rich flavor"]
         }
       },
+
       {
         "name": "Coconut Oil",
-        "description": "Cold pressed coconut oil",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7VjrGpCxFEBrNTr80Pxy6SXpPLgwBbwJDvQ&s",
-        "code": "COCONUT_OIL",
-        "price": 200,
+        "description": "Natural oil from fresh coconuts for cooking and personal care.",
+        "img": "https://www.sarvaani.in/cdn/shop/files/SARVAANI_Dry_Coconut_Oil.png?v=1771081677",
         "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=CoconutOil",
         "nutrition": {
-          "calories": 90,
-          "protein": "0g",
-          "carbs": "0g",
-          "fat": "10g",
-          "testReport": {
-            "Moisture": "0.05%",
-            "FFA": "0.3%",
-            "Iodine Value": "96-112",
-            "Saponification Value": "168-177",
-            "Refractive Index": "1.465-1.470"
-          }
-        },
+  "basic": {
+    "calories": 884,
+    "protein": "0g",
+    "carbs": "0g",
+    "fat": "100g"
+  },
+  "testReport": {
+    "Moisture": "0.05%",
+    "FFA": "0.3%",
+    "Iodine Value": "96-112",
+    "Saponification Value": "168-177",
+    "Refractive Index": "1.465-1.470"
+  }
+},
         "details": {
           "process": "Cold pressed from fresh coconuts",
           "uses": ["Cooking", "Hair care"],
@@ -115,38 +117,135 @@
         }
       },
       {
-        "name": "Mustard Oil",
-        "description": "Traditional mustard oil",
-        "img": "https://images.squarespace-cdn.com/content/v1/5f04b0aa458da11138252c08/979d2d6a-3417-4805-968c-d5bf081fd85f/industrial-seed-oils-processed-foods-kitchen.jpg",
-        "code": "MUSTARD_OIL",
-        "price": 130,
-        "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=MustardOil",
+  "name": "Mustard Oil",
+  "description": "Natural oil from fresh coconuts for cooking and personal care.",
+ "img": "/assets/images/musted.jpg",
+  "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=CoconutOil",
+ "nutrition": {
+  "basic": {
+    "calories": 884,
+    "protein": "0g",
+    "carbs": "0g",
+    "fat": "100g"
+  },
+  "testReport": {
+    "Moisture": "0.05%",
+    "FFA": "0.3%",
+    "Iodine Value": "96-112",
+    "Saponification Value": "168-177",
+    "Refractive Index": "1.465-1.470"
+  }
+},
+  "details": {
+    "process": "Cold pressed from fresh coconuts",
+    "uses": ["Cooking", "Hair care"],
+    "benefits": ["Boosts immunity", "Healthy skin"]
+  }
+},
+      {
+        "name": "Castor Oil",
+        "description": "Natural oil from fresh coconuts for cooking and personal care.",
+        "img": "https://svastyaorganicfarms.com/cdn/shop/files/organic-virgin-castor-oil-427474.jpg?v=1720965600",
+        "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=CoconutOil",
         "nutrition": {
-          "calories": 124,
-          "protein": "0g",
-          "carbs": "0g",
-          "fat": "14g",
-          "testReport": {
-            "Moisture": "0.05%",
-            "FFA": "0.3%",
-            "Iodine Value": "96-112",
-            "Saponification Value": "168-177",
-            "Refractive Index": "1.465-1.470"
-          }
-        },
+  "basic": {
+    "calories": 884,
+    "protein": "0g",
+    "carbs": "0g",
+    "fat": "100g"
+  },
+  "testReport": {
+    "Moisture": "0.05%",
+    "FFA": "0.3%",
+    "Iodine Value": "96-112",
+    "Saponification Value": "168-177",
+    "Refractive Index": "1.465-1.470"
+  }
+},
         "details": {
-          "process": "Cold pressed from mustard seeds",
-          "uses": ["Cooking", "Pickles"],
-          "benefits": ["Boosts metabolism", "Rich flavor"]
+          "process": "Cold pressed from fresh coconuts",
+          "uses": ["Cooking", "Hair care"],
+          "benefits": ["Boosts immunity", "Healthy skin"]
         }
       },
+
       {
-        "name": "Oil Waste",
-        "description": "Byproduct used as organic fertilizer and nutritious feed for cows and goats.",
-        "img": "https://5.imimg.com/data5/ECOM/Default/2022/11/SS/LR/BF/71853916/image-f536a433-6c2d-4e73-a8cf-47445a876d99.jpg",
-        "isByproduct": true,
+        "name": "Sesame Oil",
+        "description": "Natural oil from fresh coconuts for cooking and personal care.",
+        "img": "https://healthyroots.com/cdn/shop/files/Sesame-oil-cold-pressed.jpg?v=1763794292&width=1920",
+        "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=CoconutOil",
+        "nutrition": {
+  "basic": {
+    "calories": 884,
+    "protein": "0g",
+    "carbs": "0g",
+    "fat": "100g"
+  },
+  "testReport": {
+    "Moisture": "0.05%",
+    "FFA": "0.3%",
+    "Iodine Value": "96-112",
+    "Saponification Value": "168-177",
+    "Refractive Index": "1.465-1.470"
+  }
+},
         "details": {
-          "uses": ["Cow feed", "Goat feed", "Organic fertilizer", "Soil improvement"]
+          "process": "Cold pressed from fresh coconuts",
+          "uses": ["Cooking", "Hair care"],
+          "benefits": ["Boosts immunity", "Healthy skin"]
+        }
+      },
+
+      {
+        "name": "Coconut Oil",
+        "description": "Natural oil from fresh coconuts for cooking and personal care.",
+        "img": "https://www.sarvaani.in/cdn/shop/files/SARVAANI_Dry_Coconut_Oil.png?v=1771081677",
+        "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=CoconutOil",
+        "nutrition": {
+  "basic": {
+    "calories": 884,
+    "protein": "0g",
+    "carbs": "0g",
+    "fat": "100g"
+  },
+  "testReport": {
+    "Moisture": "0.05%",
+    "FFA": "0.3%",
+    "Iodine Value": "96-112",
+    "Saponification Value": "168-177",
+    "Refractive Index": "1.465-1.470"
+  }
+},
+        "details": {
+          "process": "Cold pressed from fresh coconuts",
+          "uses": ["Cooking", "Hair care"],
+          "benefits": ["Boosts immunity", "Healthy skin"]
+        }
+      },
+{
+        "name": "Coconut Oil",
+        "description": "Natural oil from fresh coconuts for cooking and personal care.",
+        "img": "https://www.sarvaani.in/cdn/shop/files/SARVAANI_Dry_Coconut_Oil.png?v=1771081677",
+        "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=CoconutOil",
+        "nutrition": { "calories": 90, "protein": "0g", "carbs": "0g", "fat": "10g" },
+        "details": {
+          "process": "Cold pressed from fresh coconuts",
+          "uses": ["Cooking", "Hair care"],
+          "benefits": ["Boosts immunity", "Healthy skin"]
+        }
+      },
+
+
+      {
+        "name": "Olive Oil",
+        "description": "Organic oil rich in omega-3 fatty acids.",
+        "img": "https://www.tatasimplybetter.com/cdn/shop/files/olive_1080x1080_2e1eabf2-2c28-4046-873c-5a9a3ae51a14.jpg?v=1734608321",
+        "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=FlaxseedOil",
+        "nutrition": { "calories": 120, "protein": "0g", "carbs": "0g", "fat": "14g" },
+        "details": {
+          "process": "Cold pressed from flaxseeds",
+          "uses": ["Salads", "Supplements"],
+          "benefits": ["Omega-3 source", "Improves digestion"]
         }
       }
     ]
