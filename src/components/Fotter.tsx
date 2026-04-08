@@ -15,13 +15,13 @@ const Footer = () => {
 
   const footer = {
     description: "We are Ganashri Oil Merchants, committed to delivering pure and premium quality edible oils.",
-    phone1: "+918087678977",
-    phone2: "+918459485202",
+    phone1: "+917795385340",
+    phone2: "+917406188562",
     email: "contact@ganashrioil.org.in",
     address: "Banhatti, Karnataka, India",
     socialMedia: {
       whatsapp: "https://web.whatsapp.com/",
-      instagram: "https://www.instagram.com/",
+      instagram: "https://www.instagram.com/ganashri_oil_dealer_banahatti",
       twitter: "https://twitter.com",
     },
   };

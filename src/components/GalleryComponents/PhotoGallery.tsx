@@ -1,11 +1,11 @@
 const PhotoGallery = () => {
   const images = [
-  "/assets/images/WhatsApp Image 2026-03-31 at 3.49.19 PM.jpeg",
-    "/assets/images/WhatsApp Image 2026-03-30 at 8.27.27 PM.jpeg", 
-    "/assets/images/WhatsApp Image 2026-03-30 at 8.27.23 PM.jpeg", 
-    "/assets/images/WhatsApp Image 2026-03-30 at 8.27.25 PM (1).jpeg",
-    "/assets/images/WhatsApp Image 2026-03-30 at 8.27.28 PM.jpeg",  
-    "/assets/images/WhatsApp Image 2026-03-30 at 8.27.26 PM.jpeg"
+  "/assets/images/img1.jpeg",
+    "/assets/images/img2.jpeg", 
+    "/assets/images/img11.jpeg", 
+    "/assets/images/img9.jpeg",
+    "/assets/images/img4.jpeg",  
+    "/assets/images/img22.jpeg"
   ];
 
   return (

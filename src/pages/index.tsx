@@ -21,8 +21,8 @@ const App = () => {
 
       {/* --- HERO SECTION --- */}
       {/* Container height now adapts to the image height */}
-      <div className="relative bg-background pt-6 md:pt-10">
-        <div className="w-full mx-auto px-4 md:px-8">
+      <div className="relative bg-background pt-0 md:pt-0">
+        <div className="w-full mx-auto px-1 md:px-4">
           <Header />
           {/* items-stretch ensures the text side matches the image height */}
           <div className="flex flex-col lg:flex-row items-stretch justify-between gap-6 pt-2 pb-6">

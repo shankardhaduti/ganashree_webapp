@@ -4,8 +4,9 @@ export default function Gallery() {
   return (
     <>
     <section id="gallery">
-      <PhotoGallery/>
       <VideoSection/>
+      <PhotoGallery/>
+      
     </section>
     
       
