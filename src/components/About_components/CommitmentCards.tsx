@@ -4,8 +4,8 @@ const CommitmentCards = () => {
       <style>{`
        
         .commitment-section {
-          padding: 40px 16px; 
-          background-color: #ffffff;
+          padding: 10px 16px; 
+        
           width: 100%;
           box-sizing: border-box;
         }
@@ -21,15 +21,16 @@ const CommitmentCards = () => {
           width: 100%;
         }
         .card {
-          padding: 24px;
-          border-radius: 20px;
-          color: #ffffff;
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          box-sizing: border-box;
-          transition: transform 0.3s ease;
-        }
+  padding: 24px;
+  border-radius: 20px;
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
         .card-primary {
           background: #FFD700 ;
         }
@@ -43,23 +44,23 @@ const CommitmentCards = () => {
           line-height: 1.2;
         }
         .card .content p {
-          font-size: 0.95rem;
-          line-height: 1.5;
-          margin-bottom: 12px;
-          opacity: 0.9;
-        }
-        .card .sub-text {
-          margin-top: 12px;
-          font-size: 0.85rem;
-          opacity: 0.8;
-          font-style: italic;
-          border-top: 1px solid rgba(255, 255, 255, 0.2);
-          padding-top: 16px;
-        }
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  opacity: 0.85;
+}
+       .card .sub-text {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  font-style: italic;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 16px;
+}
       
         @media (min-width: 768px) {
           .commitment-section {
-            padding: 120px 40px; /* More white space for desktop */
+            padding: 20px 40px; /* More white space for desktop */
           }
           .cards-grid {
             display: grid;

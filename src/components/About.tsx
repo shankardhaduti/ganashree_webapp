@@ -8,7 +8,11 @@ function About() {
     <section>
       <ImpactPage />
       <OurJourney />
-      <CommitmentCards />
+        <div className="relative w-full">
+          
+                <CommitmentCards />
+            </div>
+    
     </section>
   );
 }

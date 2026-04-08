@@ -4,9 +4,10 @@ const MainHeroImage = () => {
   const { mainHero } = config;
 
   return (
-    <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 flex items-center justify-center">
+    /* Removed absolute positioning so the div expands to the image height */
+    <div className="w-full flex items-center justify-center p-4">
       <img
-        className="w-full h-auto object-contain"
+        className="w-full h-auto object-contain" 
         src={mainHero.img}
         alt="hero image"
       />

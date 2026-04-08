@@ -63,7 +63,7 @@ const OurJourney: FC = () => {
 
         /* SECTION */
         .journey-section {
-          padding: 20px 16px 60px;
+          padding:40px 16px 10px;
           background-color: #ffffff;
         }
 
@@ -71,7 +71,7 @@ const OurJourney: FC = () => {
           position: relative;
           max-width: 1000px;
           width: 100%;
-          margin: 0 auto 40px;
+          margin: 0 auto 20px;
         }
 
         /* MOBILE FIXED HEIGHT */
@@ -161,19 +161,22 @@ const OurJourney: FC = () => {
         .milestone-card h3 {
           color: #111827;
           font-weight: 700;
-          margin-bottom: 6px;
+          margin: 0;
+          line-height: 1.2
           font-size: 1.1rem;
         }
 
         .milestone-card p {
           color: #6b7280;
-          font-size: 0.9rem;
+           margin: 4px 0 0;  
+            line-height: 1.4
+          font-size: 1.0rem;
         }
 
         /* DESKTOP */
         @media (min-width: 768px) {
           .journey-section {
-            padding: 100px 40px;
+            padding: 30px 40px;
           }
 
           .carousel-viewport {
@@ -207,7 +210,7 @@ const OurJourney: FC = () => {
 
       <div className="max-w-6xl mx-auto px-4">
         {/* HEADER */}
-        <div className="text-center mb-10 px-2">
+        <div className="text-center mb-6 px-2">
           <h2
             className="text-3xl md:text-5xl font-extrabold mb-4"
             style={{ color: "var(--color-secondary)" }}
