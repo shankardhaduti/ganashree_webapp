@@ -1,20 +1,62 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import config from "../config/index.json";
 
+/* ================= TYPES ================= */
+
+type ProductItem = {
+  name: string;
+  description: string;
+  img: string;
+  qr: string;
+  isByproduct?: boolean;
+  nutrition?: {
+    basic?: {
+      calories: number;
+      protein: string;
+      carbs: string;
+      fat: string;
+    };
+    testReport?: {
+      Moisture: string;
+      FFA: string;
+      "Iodine Value": string;
+      "Saponification Value": string;
+      "Refractive Index": string;
+    };
+  };
+  details?: {
+    process?: string;
+    uses?: string[];
+    benefits?: string[];
+  };
+};
+
+type ConfigType = {
+  product: {
+    items: ProductItem[];
+  };
+};
+
+/* ================= COMPONENT ================= */
+
 const Product = () => {
-  const { product } = config;
+  const { product } = config as ConfigType;
 
-  const [selected, setSelected] = useState(null);
-  const scrollRef = useRef(null);
+  const [selected, setSelected] = useState<ProductItem | null>(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
 
-  const normalProducts = product.items.filter((item) => !item.isByproduct);
+  const normalProducts = product.items.filter(
+    (item) => !item.isByproduct
+  );
 
   return (
     <section className="relative bg-white" id="product">
       <div className="max-w-6xl mx-auto px-4 py-12">
 
-        {/* ======= NORMAL PRODUCTS (OILS) ======= */}
-        <h2 className="text-3xl font-bold text-center mb-6">Our Oils</h2>
+        {/* ======= NORMAL PRODUCTS ======= */}
+        <h2 className="text-3xl font-bold text-center mb-6">
+          Our Products
+        </h2>
 
         <div className="grid md:grid-cols-3 gap-8">
           {normalProducts.map((item, index) => (
@@ -50,16 +92,16 @@ const Product = () => {
         {/* ======= POPUP ======= */}
         {selected && (
           <div
-           className="fixed inset-0 bg-black bg-opacity-90 z-50 overflow-y-auto"
+            className="fixed inset-0 bg-black bg-opacity-90 z-50 overflow-y-auto"
             onClick={() => setSelected(null)}
           >
             <div
-             className="flex flex-col md:flex-row bg-transparent w-full max-w-6xl min-h-screen md:h-[70vh] relative"
+              className="flex flex-col md:flex-row bg-transparent w-full max-w-6xl min-h-screen md:h-[70vh] relative mx-auto"
               onClick={(e) => e.stopPropagation()}
             >
 
               {/* LEFT IMAGE */}
-              <div className="md:w-1/2 flex justify-center items-center">
+              <div className="md:w-1/2 flex justify-center items-center p-4">
                 <img
                   src={selected.img}
                   alt={selected.name}
@@ -68,16 +110,21 @@ const Product = () => {
               </div>
 
               {/* RIGHT CONTENT */}
-              <div className="md:w-1/2 w-full">
+              <div className="md:w-1/2 w-full relative">
 
                 <div
                   ref={scrollRef}
-              className="text-white p-6 max-h-[60vh] md:max-h-[70vh] overflow-y-auto"
+                  className="text-white p-6 max-h-[60vh] md:max-h-[70vh] overflow-y-auto"
                 >
-                  <h2 className="text-3xl font-bold mb-3">{selected.name}</h2>
-                  <p className="mb-4">{selected.description}</p>
+                  <h2 className="text-3xl font-bold mb-3">
+                    {selected.name}
+                  </h2>
 
-                  {/* ✅ QR CODE (ADDED HERE) */}
+                  <p className="mb-4">
+                    {selected.description}
+                  </p>
+
+                  {/* QR CODE */}
                   {selected.qr && (
                     <div className="flex justify-center mb-6">
                       <img
@@ -88,37 +135,45 @@ const Product = () => {
                     </div>
                   )}
 
-                  {/* NUTRITION */}
-                 {/* TEST REPORT */}
-{selected.nutrition?.testReport && (
-  <div className="mb-4">
-    <h4 className="font-semibold text-lg mb-2">Test Report</h4>
-    <ul className="list-disc list-inside text-sm">
-      {Object.entries(selected.nutrition.testReport).map(([key, value], i) => (
-        <li key={i}>
-          {key}: {value}
-        </li>
-      ))}
-    </ul>
-  </div>
-)}
+                  {/* TEST REPORT */}
+                  {selected.nutrition?.testReport && (
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-lg mb-2">
+                        Test Report
+                      </h4>
+                      <ul className="list-disc list-inside text-sm">
+                        {Object.entries(selected.nutrition.testReport).map(
+                          ([key, value], i) => (
+                            <li key={i}>
+                              {key}: {value}
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    </div>
+                  )}
 
                   {/* DETAILS */}
                   {selected.details && (
                     <div>
                       {selected.details.process && (
                         <p className="mb-2">
-                          <span className="font-semibold">Process:</span> {selected.details.process}
+                          <span className="font-semibold">Process:</span>{" "}
+                          {selected.details.process}
                         </p>
                       )}
+
                       {selected.details.uses && (
                         <p className="mb-2">
-                          <span className="font-semibold">Uses:</span> {selected.details.uses.join(", ")}
+                          <span className="font-semibold">Uses:</span>{" "}
+                          {selected.details.uses.join(", ")}
                         </p>
                       )}
+
                       {selected.details.benefits && (
                         <p>
-                          <span className="font-semibold">Benefits:</span> {selected.details.benefits.join(", ")}
+                          <span className="font-semibold">Benefits:</span>{" "}
+                          {selected.details.benefits.join(", ")}
                         </p>
                       )}
                     </div>

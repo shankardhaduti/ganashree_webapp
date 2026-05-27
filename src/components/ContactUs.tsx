@@ -3,74 +3,139 @@ import React, { useState } from "react";
 
 // ⭐ Your Web3Forms keys
 const WEB3FORMS_URL = "https://api.web3forms.com/submit";
-const ACCESS_KEY = "0633266a-88b7-4716-a8e2-cb312b17931e";
+const ACCESS_KEY = "b39f08f7-9bfd-45e5-a1bc-7105619bcfd1";
 
 const ContactUs = () => {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
+ const [form, setForm] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  subject: "",
+  message: "",
+});
 
-  const [errors, setErrors] = useState({});
-  const nameRegex = /^[A-Za-z\s]{3,50}$/;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const phoneRegex = /^[6-9]\d{9}$/;
+const [errors, setErrors] = useState({});
 
-  const validateInputs = () => {
-    let newErrors: any = {};
+const nameRegex = /^[A-Za-z\s]{3,50}$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const phoneRegex = /^[6-9]\d{9}$/;
+const subjectRegex = /^.{3,100}$/;
+const messageRegex = /^.{10,1000}$/;
 
-    if (!nameRegex.test(form.name)) newErrors.name = "Enter a valid full name";
+const validateInputs = () => {
+  let newErrors: any = {};
 
-    if (!emailRegex.test(form.email)) newErrors.email = "Enter a valid email";
+  const name = form.name.trim();
+  const email = form.email.trim();
+  const phone = form.phone.replace(/\D/g, "");
+  const subject = form.subject.trim();
+  const message = form.message.trim();
 
-    if (!phoneRegex.test(form.phone))
-      newErrors.phone = "Enter a valid 10-digit mobile number";
+  // ✅ Name
+  if (!name) {
+    newErrors.name = "Name is required";
+  } else if (!nameRegex.test(name)) {
+    newErrors.name = "Only letters (3–50 characters)";
+  }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+  // ✅ Email
+  if (!email) {
+    newErrors.email = "Email is required";
+  } else if (!emailRegex.test(email)) {
+    newErrors.email = "Enter valid email";
+  }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!validateInputs()) return;
+  // ✅ Phone
+  if (!phone) {
+    newErrors.phone = "Mobile number is required";
+  } else if (phone.length !== 10) {
+    newErrors.phone = "Must be exactly 10 digits";
+  } else if (!phoneRegex.test(phone)) {
+    newErrors.phone = "Must start with 6-9";
+  }
 
-    const formData = new FormData();
-    formData.append("access_key", ACCESS_KEY);
-    formData.append("name", form.name);
-    formData.append("email", form.email);
-    formData.append("phone", form.phone);
-    formData.append("message", `Subject: ${form.subject}\n\n${form.message}`);
-    formData.append("form_type", "Contact Form");
+  // ✅ Subject
+  if (!subject) {
+    newErrors.subject = "Subject is required";
+  } else if (!subjectRegex.test(subject)) {
+    newErrors.subject = "3–100 characters allowed";
+  }
 
-    try {
-      const res = await fetch(WEB3FORMS_URL, {
-        method: "POST",
-        body: formData,
+  // ✅ Message
+  if (!message) {
+    newErrors.message = "Message is required";
+  } else if (!messageRegex.test(message)) {
+    newErrors.message = "10–1000 characters allowed";
+  }
+
+  setErrors(newErrors);
+  return Object.keys(newErrors).length === 0;
+};
+
+
+const handleSubmit = async (e: any) => {
+  e.preventDefault();
+
+
+  if (!validateInputs()) {
+    console.log("Validation failed ❌");
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append("access_key", ACCESS_KEY);
+  formData.append("name", form.name.trim());
+  formData.append("email", form.email.trim());
+  formData.append("phone", form.phone.replace(/\D/g, ""));
+  formData.append(
+    "message",
+    `Subject: ${form.subject}\n\n${form.message}`
+  );
+  formData.append("form_type", "Contact Form");
+
+  try {
+    const res = await fetch(WEB3FORMS_URL, {
+      method: "POST",
+      body: formData,
+    });
+
+    const result = await res.json();
+
+    if (result.success) {
+      alert("Message sent successfully! ✅");
+
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
       });
 
-      const result = await res.json();
-
-      if (result.success) {
-        alert("Message sent successfully!");
-
-        setForm({
-          name: "",
-          email: "",
-          phone: "",
-          subject: "",
-          message: "",
-        });
-      } else {
-        alert("Something went wrong. Try again later!");
-      }
-    } catch {
-      alert("Network error. Please try again!");
+      setErrors({}); // ✅ clear errors
+    } else {
+      alert("Something went wrong ❌");
     }
-  };
+  } catch (err) {
+    console.log(err);
+    alert("Network error ❌");
+  }
+};
 
+const handleChange = (e: any) => {
+  let { name, value } = e.target;
+
+  if (name === "phone") {
+    value = value.replace(/\D/g, "").slice(0, 10);
+  }
+
+  setForm({ ...form, [name]: value });
+
+  // ✅ clear error while typing
+  if (errors[name]) {
+    setErrors({ ...errors, [name]: "" });
+  }
+};
   // Modern inline SVG icons
   const MailIcon = () => (
     <svg
@@ -126,152 +191,77 @@ const ContactUs = () => {
   );
 
   return (
-    <section id="contact" className="px-6 py-16 max-w-6xl mx-auto">
-      <h2 className="text-4xl font-bold text-center mb-8">Contact Us</h2>
+  <section
+  id="contact"
+  className="px-6 py-16 max-w-6xl mx-auto flex flex-col items-center"
+>
+  <h2 className="text-4xl font-bold text-center mb-8">Contact Us</h2>
 
-      <div className="grid md:grid-cols-2 gap-10">
-        {/* LEFT: CONTACT FORM */}
+  <div className="w-full flex justify-center">
+    <div className="space-y-8 w-full max-w-2xl">
+      {/* Email */}
+      <div className="flex gap-4 items-start p-4 border rounded-lg shadow">
+        <MailIcon />
         <div>
-          <h3 className="text-2xl font-semibold mb-4">Send us a Message</h3>
-
-          <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Name */}
-            <div>
-              <label className="font-medium">Full Name *</label>
-              <input
-                className="w-full border p-2 rounded"
-                value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
-                required
-              />
-              {errors.name && (
-                <p className="text-red-500 text-sm">{errors.name}</p>
-              )}
-            </div>
-
-            {/* Email */}
-            <div>
-              <label className="font-medium">Email *</label>
-              <input
-                type="email"
-                className="w-full border p-2 rounded"
-                value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                required
-              />
-              {errors.email && (
-                <p className="text-red-500 text-sm">{errors.email}</p>
-              )}
-            </div>
-
-            {/* Phone */}
-            <div>
-              <label className="font-medium">Phone *</label>
-              <input
-                className="w-full border p-2 rounded"
-                value={form.phone}
-                onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                required
-              />
-              {errors.phone && (
-                <p className="text-red-500 text-sm">{errors.phone}</p>
-              )}
-            </div>
-
-            {/* Subject */}
-            <div>
-              <label className="font-medium">Subject *</label>
-              <input
-                className="w-full border p-2 rounded"
-                value={form.subject}
-                onChange={(e) => setForm({ ...form, subject: e.target.value })}
-                required
-              />
-            </div>
-
-            {/* Message */}
-            <div>
-              <label className="font-medium">Message *</label>
-              <textarea
-                rows={5}
-                className="w-full border p-2 rounded"
-                value={form.message}
-                onChange={(e) => setForm({ ...form, message: e.target.value })}
-                required
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-primary text-white py-2 rounded-md"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
-
-        {/* RIGHT: CONTACT DETAILS */}
-        <div className="space-y-6">
-          {/* Email */}
-          <div className="flex gap-4 items-start p-4 border rounded-lg shadow">
-            <MailIcon />
-            <div>
-              <h4 className="font-bold text-lg">Email</h4>
-              <p
-                className="cursor-pointer text-primary"
-                onClick={() =>
-                  window.open(
-                    "https://mail.google.com/mail/?view=cm&fs=1&to=contact@shreebalajifoundation.org.in"
-                  )
-                }
-              >
-                contact@ganashrioil.org.in
-              </p>
-              <p className="text-gray-600">Send us an email anytime</p>
-            </div>
-          </div>
-
-          {/* Phone */}
-          <div className="flex gap-4 items-start p-4 border rounded-lg shadow">
-            <PhoneIcon />
-            <div>
-              <h4 className="font-bold text-lg">Phone</h4>
-              <p
-                className="cursor-pointer text-primary"
-                onClick={() => (window.location = "tel:+918087678977")}
-              >
-                +91 8087678977
-              </p>
-              <p
-                className="cursor-pointer text-primary"
-                onClick={() => (window.location = "tel:+918459485202")}
-              >
-                +91 8459485202
-              </p>
-              <p className="text-gray-600">Mon–Fri, 9am – 6pm</p>
-            </div>
-          </div>
-
-          {/* Address */}
-          <div
-            className="flex gap-4 items-start p-4 border rounded-lg shadow cursor-pointer"
+          <h4 className="font-bold text-lg">Email</h4>
+          <p
+            className="cursor-pointer text-primary"
             onClick={() =>
               window.open(
-                "https://www.google.com/maps/place/Rabkavi+Banhatti,+Karnataka/@16.483528,75.1205313,15z/data=!3m1!4b1!4m6!3m5!1s0x3bc730c4c74169e1:0x7a009f84902ec864!8m2!3d16.4823017!4d75.12243!16zL20vMGY2MjJ6?entry=ttu&g_ep=EgoyMDI2MDMzMC4wIKXMDSoASAFQAw%3D%3D",
-                "_blank"
+                "https://mail.google.com/mail/?view=cm&fs=1&to=contact@ganashrioil.org.in"
               )
             }
           >
-            <MapPinIcon />
-            <div>
-              <h4 className="font-bold text-lg">Address</h4>
-              <p>Banahatti, Karnataka, India</p>
-              <p className="text-gray-600">Visit our shop</p>
-            </div>
-          </div>
+            contact@ganashrioil.org.in
+          </p>
+          <p className="text-gray-600">Send us an email anytime</p>
         </div>
       </div>
-    </section>
+
+      {/* Phone */}
+      <div className="flex gap-4 items-start p-4 border rounded-lg shadow">
+        <PhoneIcon />
+        <div>
+          <h4 className="font-bold text-lg">Phone</h4>
+
+          <p
+            className="cursor-pointer text-primary"
+            onClick={() => (window.location.href = "tel:+917795385340")}
+          >
+            +91 7795385340
+          </p>
+
+          <p
+            className="cursor-pointer text-primary"
+            onClick={() => (window.location.href = "tel:+917406188562")}
+          >
+            +91 7406188562
+          </p>
+
+          <p className="text-gray-600">Mon–Fri, 9am – 6pm</p>
+        </div>
+      </div>
+
+      {/* Address */}
+      <div
+        className="flex gap-4 items-start p-4 border rounded-lg shadow cursor-pointer"
+        onClick={() =>
+          window.open(
+            "https://www.google.com/maps/place/Rabkavi+Banhatti,+Karnataka/",
+            "_blank"
+          )
+        }
+      >
+        <MapPinIcon />
+        <div>
+          <h4 className="font-bold text-lg">Address</h4>
+          <p>Banahatti, Karnataka, India</p>
+          <p className="text-gray-600">Visit our shop</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   );
 };
 

@@ -8,6 +8,7 @@ import Footer from '../components/Fotter';
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import PeopleIcon from "@mui/icons-material/People";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import ScrollToTop from '../components/About_components/ScrollToTop';
 
 const stats = [
   { icon: PeopleIcon, value: "50+", label: "Experience", desc: "Over 50 years of experience", gradient: "#FFD700" },
@@ -137,6 +138,8 @@ const App = () => {
       {/* -mt-32 pulls the Canvas waves up UNDER the Compliance card to fix the gap */}
       <div className="relative w-full -mt-32 md:-mt-48 z-0">
         <Canvas />
+              <ScrollToTop />
+        
         <div className="bg-gray-900"> 
           <Footer />
         </div>

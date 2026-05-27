@@ -10,6 +10,7 @@ import Footer from "../components/Fotter";
 import LazyShow from "../components/LazyShow";
 import Gallery from "../components/Gallery";
 import Canvas from "../components/Canvas";
+import ScrollToTop from "../components/About_components/ScrollToTop";
 
 export default function GalleryPage() {
   return (
@@ -21,6 +22,8 @@ export default function GalleryPage() {
        <div className="relative w-full -mt-32 md:-mt-48 z-0">
         <Canvas />
       </div>
+            <ScrollToTop />
+      
       <div className="relative w-full">
     
         <Footer />

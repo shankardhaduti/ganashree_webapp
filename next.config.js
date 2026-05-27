@@ -2,10 +2,16 @@
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  turbopack: {}, // allows npm/Webpack usage and silences Turbopack warnings
+
+  // ✅ THIS IS REQUIRED
+  output: "export",
+
+  // optional (keep if needed)
+  turbopack: {},
 };
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(nextConfig);

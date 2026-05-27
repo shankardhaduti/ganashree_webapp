@@ -34,15 +34,13 @@ const Menu = () => {
 
             {/* LOGO */}
             <div className="flex items-center flex-grow lg:flex-grow-0">
-              <Link href="/">
-                <div className="flex items-center cursor-pointer">
-                  <span className="sr-only">{companyName}</span>
-                  <img
-                    alt="logo"
-                    className="h-16 w-auto"
-                    src={logo}
-                  />
-                </div>
+              <Link href="/" className="flex items-center cursor-pointer">
+                <span className="sr-only">{companyName}</span>
+                <img
+                  alt="logo"
+                  className="h-16 w-auto"
+                  src={logo}
+                />
               </Link>
             </div>
 
@@ -62,23 +60,23 @@ const Menu = () => {
                     : pathname.startsWith(item.href);
 
                 return (
-                  <Link key={item.name} href={item.href}>
-                    <span
-                      className={`relative px-2 py-1 font-medium cursor-pointer transition-all duration-300 ${
-                        isActive
-                          ? "text-[var(--color-secondary)] font-semibold"
-                          : "text-tertiary hover:text-[var(--color-secondary)]"
-                      }`}
-                    >
-                      {item.name}
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`relative px-2 py-1 font-medium transition-all duration-300 ${
+                      isActive
+                        ? "text-[var(--color-secondary)] font-semibold"
+                        : "text-tertiary hover:text-[var(--color-secondary)]"
+                    }`}
+                  >
+                    {item.name}
 
-                      {/* underline */}
-                      <span
-                        className={`absolute left-0 -bottom-1 h-[2px] bg-[var(--color-primary)] transition-all duration-300 ${
-                          isActive ? "w-full" : "w-0"
-                        }`}
-                      ></span>
-                    </span>
+                    {/* underline */}
+                    <span
+                      className={`absolute left-0 -bottom-1 h-[2px] bg-[var(--color-primary)] transition-all duration-300 ${
+                        isActive ? "w-full" : "w-0"
+                      }`}
+                    ></span>
                   </Link>
                 );
               })}
@@ -116,16 +114,16 @@ const Menu = () => {
                       : pathname.startsWith(item.href);
 
                   return (
-                    <Link key={item.name} href={item.href}>
-                      <span
-                        className={`block px-3 py-2 rounded-md cursor-pointer transition ${
-                          isActive
-                            ? "text-[var(--color-secondary)] bg-yellow-100 font-semibold"
-                            : "text-gray-700 hover:text-[var(--color-secondary)] hover:bg-gray-50"
-                        }`}
-                      >
-                        {item.name}
-                      </span>
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className={`block px-3 py-2 rounded-md transition ${
+                        isActive
+                          ? "text-[var(--color-secondary)] bg-yellow-100 font-semibold"
+                          : "text-gray-700 hover:text-[var(--color-secondary)] hover:bg-gray-50"
+                      }`}
+                    >
+                      {item.name}
                     </Link>
                   );
                 })}
