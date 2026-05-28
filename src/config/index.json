@@ -38,7 +38,7 @@
       {
         "name": "Sunflower Oil",
         "description": "Light and healthy oil ideal for daily cooking and frying.",
-       "img": "https://kumarmetal.com/wp-content/uploads/784053690-sunflower-oil-properties-and-manufacture.jpg",
+       "img": "/assets/images/oil3.png",
         "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=SunflowerOil",
         "nutrition": {
   "basic": {
@@ -65,7 +65,7 @@
       {
         "name": "Groundnut Oil",
         "description": "Traditional oil with rich aroma, perfect for deep frying.",
-        "img": "/assets/images/G1.jpg",
+        "img": "/assets/images/oil1.png",
         "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=GroundnutOil",
         "nutrition": {
   "basic": {
@@ -92,7 +92,7 @@
       {
         "name": "Coconut Oil",
         "description": "Natural oil from fresh coconuts for cooking and personal care.",
-        "img": "https://www.sarvaani.in/cdn/shop/files/SARVAANI_Dry_Coconut_Oil.png?v=1771081677",
+        "img": "/assets/images/oil4.png",
         "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=CoconutOil",
         "nutrition": {
   "basic": {
@@ -118,8 +118,8 @@
       {
   "name": "Mustard Oil",
   "description": "Natural oil from fresh coconuts for cooking and personal care.",
- "img": "/assets/images/musted.jpg",
-  "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=CoconutOil",
+ "img": "/assets/images/oil2.png",
+  "qr": "/assets/images/oil2.png",
  "nutrition": {
   "basic": {
     "calories": 884,
@@ -144,8 +144,8 @@
       {
         "name": "Castor Oil",
         "description": "Natural oil from fresh coconuts for cooking and personal care.",
-        "img": "https://svastyaorganicfarms.com/cdn/shop/files/organic-virgin-castor-oil-427474.jpg?v=1720965600",
-        "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=CoconutOil",
+        "img": "/assets/images/oil8.png",
+        "qr": "/assets/images/oil5.png",
         "nutrition": {
   "basic": {
     "calories": 884,
@@ -171,8 +171,8 @@
       {
         "name": "Sesame Oil",
         "description": "Natural oil from fresh coconuts for cooking and personal care.",
-        "img": "https://healthyroots.com/cdn/shop/files/Sesame-oil-cold-pressed.jpg?v=1763794292&width=1920",
-        "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=CoconutOil",
+        "img": "/assets/images/oil6.png",
+        "qr": "/assets/images/oil6.png",
         "nutrition": {
   "basic": {
     "calories": 884,
@@ -198,8 +198,8 @@
       {
         "name": "Coconut Oil",
         "description": "Natural oil from fresh coconuts for cooking and personal care.",
-        "img": "https://www.sarvaani.in/cdn/shop/files/SARVAANI_Dry_Coconut_Oil.png?v=1771081677",
-        "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=CoconutOil",
+        "img": "/assets/images/oil4.png",
+        "qr": "/assets/images/oil4.png",
         "nutrition": {
   "basic": {
     "calories": 884,
@@ -224,8 +224,8 @@
 {
         "name": "Coconut Oil",
         "description": "Natural oil from fresh coconuts for cooking and personal care.",
-        "img": "https://www.sarvaani.in/cdn/shop/files/SARVAANI_Dry_Coconut_Oil.png?v=1771081677",
-        "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=CoconutOil",
+        "img": "/assets/images/oil4.png",
+        "qr": "/assets/images/oil4.png",
         "nutrition": { "calories": 90, "protein": "0g", "carbs": "0g", "fat": "10g" },
         "details": {
           "process": "Cold pressed from fresh coconuts",
@@ -238,8 +238,8 @@
       {
         "name": "Olive Oil",
         "description": "Organic oil rich in omega-3 fatty acids.",
-        "img": "https://www.tatasimplybetter.com/cdn/shop/files/olive_1080x1080_2e1eabf2-2c28-4046-873c-5a9a3ae51a14.jpg?v=1734608321",
-        "qr": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=FlaxseedOil",
+        "img": "/assets/images/oil7.png",
+        "qr": "/assets/images/oil7.png",
         "nutrition": { "calories": 120, "protein": "0g", "carbs": "0g", "fat": "14g" },
         "details": {
           "process": "Cold pressed from flaxseeds",
